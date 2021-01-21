@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TofyWallet
+
+  Created by usuario on 21/1/21.
+  
+*/
+
+
+//BIOMETRIA
+"activarTouchID" = "Activar Touch ID";
+"activarFaceID" = "Activar Face ID";

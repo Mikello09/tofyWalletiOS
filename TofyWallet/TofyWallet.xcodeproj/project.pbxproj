@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,34 @@
 		84088D9325B9D59D00264589 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84088D9225B9D59D00264589 /* Preview Assets.xcassets */; };
 		84088D9E25B9D59D00264589 /* TofyWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088D9D25B9D59D00264589 /* TofyWalletTests.swift */; };
 		84088DA925B9D59D00264589 /* TofyWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DA825B9D59D00264589 /* TofyWalletUITests.swift */; };
+		84088DBB25B9D66B00264589 /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DBA25B9D66B00264589 /* Colores.swift */; };
+		84088DBC25B9D66B00264589 /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DBA25B9D66B00264589 /* Colores.swift */; };
+		84088DBD25B9D66B00264589 /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DBA25B9D66B00264589 /* Colores.swift */; };
+		84088DC525B9D73A00264589 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DC425B9D73A00264589 /* TextView.swift */; };
+		84088DC625B9D73A00264589 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DC425B9D73A00264589 /* TextView.swift */; };
+		84088DC725B9D73A00264589 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DC425B9D73A00264589 /* TextView.swift */; };
+		84088DCC25B9D80900264589 /* Botones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DCB25B9D80900264589 /* Botones.swift */; };
+		84088DCD25B9D80900264589 /* Botones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DCB25B9D80900264589 /* Botones.swift */; };
+		84088DCE25B9D80900264589 /* Botones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DCB25B9D80900264589 /* Botones.swift */; };
+		84088DD325B9D85A00264589 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DD225B9D85A00264589 /* BaseView.swift */; };
+		84088DD425B9D85A00264589 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DD225B9D85A00264589 /* BaseView.swift */; };
+		84088DD525B9D85A00264589 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DD225B9D85A00264589 /* BaseView.swift */; };
+		84088DDA25B9D8A100264589 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DD925B9D8A100264589 /* LottieView.swift */; };
+		84088DDB25B9D8A100264589 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DD925B9D8A100264589 /* LottieView.swift */; };
+		84088DDC25B9D8A100264589 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DD925B9D8A100264589 /* LottieView.swift */; };
+		84088DE225B9D93200264589 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 84088DE125B9D93200264589 /* Lottie */; };
+		84088DEA25B9D98800264589 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DE925B9D98800264589 /* Modifiers.swift */; };
+		84088DEB25B9D98800264589 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DE925B9D98800264589 /* Modifiers.swift */; };
+		84088DEC25B9D98800264589 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DE925B9D98800264589 /* Modifiers.swift */; };
+		84088DF125B9D9E800264589 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DF025B9D9E800264589 /* Extensions.swift */; };
+		84088DF225B9D9E800264589 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DF025B9D9E800264589 /* Extensions.swift */; };
+		84088DF325B9D9E800264589 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DF025B9D9E800264589 /* Extensions.swift */; };
+		84088DF825B9DA1700264589 /* BiometriaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DF725B9DA1700264589 /* BiometriaHelper.swift */; };
+		84088DF925B9DA1700264589 /* BiometriaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DF725B9DA1700264589 /* BiometriaHelper.swift */; };
+		84088DFA25B9DA1700264589 /* BiometriaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088DF725B9DA1700264589 /* BiometriaHelper.swift */; };
+		84088DFF25B9DA5500264589 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84088DFE25B9DA5500264589 /* Localizable.strings */; };
+		84088E0025B9DA5500264589 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84088DFE25B9DA5500264589 /* Localizable.strings */; };
+		84088E0125B9DA5500264589 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84088DFE25B9DA5500264589 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +73,15 @@
 		84088DA425B9D59D00264589 /* TofyWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TofyWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84088DA825B9D59D00264589 /* TofyWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TofyWalletUITests.swift; sourceTree = "<group>"; };
 		84088DAA25B9D59D00264589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84088DBA25B9D66B00264589 /* Colores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colores.swift; sourceTree = "<group>"; };
+		84088DC425B9D73A00264589 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		84088DCB25B9D80900264589 /* Botones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botones.swift; sourceTree = "<group>"; };
+		84088DD225B9D85A00264589 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		84088DD925B9D8A100264589 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		84088DE925B9D98800264589 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		84088DF025B9D9E800264589 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84088DF725B9DA1700264589 /* BiometriaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometriaHelper.swift; sourceTree = "<group>"; };
+		84088DFE25B9DA5500264589 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84088DE225B9D93200264589 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +133,7 @@
 		84088D8A25B9D59A00264589 /* TofyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				84088DB925B9D65900264589 /* Helpers */,
 				84088D8B25B9D59A00264589 /* TofyWalletApp.swift */,
 				84088D8D25B9D59A00264589 /* ContentView.swift */,
 				84088D8F25B9D59D00264589 /* Assets.xcassets */,
@@ -130,6 +169,22 @@
 			path = TofyWalletUITests;
 			sourceTree = "<group>";
 		};
+		84088DB925B9D65900264589 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84088DBA25B9D66B00264589 /* Colores.swift */,
+				84088DC425B9D73A00264589 /* TextView.swift */,
+				84088DCB25B9D80900264589 /* Botones.swift */,
+				84088DD225B9D85A00264589 /* BaseView.swift */,
+				84088DD925B9D8A100264589 /* LottieView.swift */,
+				84088DE925B9D98800264589 /* Modifiers.swift */,
+				84088DF025B9D9E800264589 /* Extensions.swift */,
+				84088DF725B9DA1700264589 /* BiometriaHelper.swift */,
+				84088DFE25B9DA5500264589 /* Localizable.strings */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +201,9 @@
 			dependencies = (
 			);
 			name = TofyWallet;
+			packageProductDependencies = (
+				84088DE125B9D93200264589 /* Lottie */,
+			);
 			productName = TofyWallet;
 			productReference = 84088D8825B9D59A00264589 /* TofyWallet.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +275,9 @@
 				Base,
 			);
 			mainGroup = 84088D7F25B9D59A00264589;
+			packageReferences = (
+				84088DE025B9D93200264589 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 84088D8925B9D59A00264589 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84088D9325B9D59D00264589 /* Preview Assets.xcassets in Resources */,
+				84088DFF25B9DA5500264589 /* Localizable.strings in Resources */,
 				84088D9025B9D59D00264589 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84088E0025B9DA5500264589 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84088E0125B9DA5500264589 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84088DF825B9DA1700264589 /* BiometriaHelper.swift in Sources */,
 				84088D8E25B9D59A00264589 /* ContentView.swift in Sources */,
+				84088DF125B9D9E800264589 /* Extensions.swift in Sources */,
+				84088DC525B9D73A00264589 /* TextView.swift in Sources */,
+				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,
+				84088DD325B9D85A00264589 /* BaseView.swift in Sources */,
+				84088DEA25B9D98800264589 /* Modifiers.swift in Sources */,
+				84088DDA25B9D8A100264589 /* LottieView.swift in Sources */,
 				84088D8C25B9D59A00264589 /* TofyWalletApp.swift in Sources */,
+				84088DCC25B9D80900264589 /* Botones.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84088DC625B9D73A00264589 /* TextView.swift in Sources */,
 				84088D9E25B9D59D00264589 /* TofyWalletTests.swift in Sources */,
+				84088DEB25B9D98800264589 /* Modifiers.swift in Sources */,
+				84088DF225B9D9E800264589 /* Extensions.swift in Sources */,
+				84088DF925B9DA1700264589 /* BiometriaHelper.swift in Sources */,
+				84088DD425B9D85A00264589 /* BaseView.swift in Sources */,
+				84088DCD25B9D80900264589 /* Botones.swift in Sources */,
+				84088DBC25B9D66B00264589 /* Colores.swift in Sources */,
+				84088DDB25B9D8A100264589 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84088DC725B9D73A00264589 /* TextView.swift in Sources */,
 				84088DA925B9D59D00264589 /* TofyWalletUITests.swift in Sources */,
+				84088DEC25B9D98800264589 /* Modifiers.swift in Sources */,
+				84088DF325B9D9E800264589 /* Extensions.swift in Sources */,
+				84088DFA25B9DA1700264589 /* BiometriaHelper.swift in Sources */,
+				84088DD525B9D85A00264589 /* BaseView.swift in Sources */,
+				84088DCE25B9D80900264589 /* Botones.swift in Sources */,
+				84088DBD25B9D66B00264589 /* Colores.swift in Sources */,
+				84088DDC25B9D8A100264589 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +662,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84088DE025B9D93200264589 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84088DE125B9D93200264589 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84088DE025B9D93200264589 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84088D8025B9D59A00264589 /* Project object */;
 }
