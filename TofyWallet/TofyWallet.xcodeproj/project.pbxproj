@@ -47,6 +47,10 @@
 		84088E1125B9E5C800264589 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088E1025B9E5C800264589 /* Usuario.swift */; };
 		84088E1225B9E5C800264589 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088E1025B9E5C800264589 /* Usuario.swift */; };
 		84088E1325B9E5C800264589 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84088E1025B9E5C800264589 /* Usuario.swift */; };
+		848DC11725BAF09200F94731 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC11625BAF09200F94731 /* MainView.swift */; };
+		848DC12225BAF14300F94731 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC12125BAF14300F94731 /* HomeView.swift */; };
+		848DC12A25BAF14F00F94731 /* PeriodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC12925BAF14F00F94731 /* PeriodoView.swift */; };
+		848DC13225BAF17800F94731 /* HistoricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC13125BAF17800F94731 /* HistoricoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +94,10 @@
 		84088DFE25B9DA5500264589 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		84088E0625B9E53D00264589 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		84088E1025B9E5C800264589 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		848DC11625BAF09200F94731 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		848DC12125BAF14300F94731 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		848DC12925BAF14F00F94731 /* PeriodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoView.swift; sourceTree = "<group>"; };
+		848DC13125BAF17800F94731 /* HistoricoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,10 @@
 		84088D8A25B9D59A00264589 /* TofyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				848DC12025BAF13200F94731 /* Historico */,
+				848DC11F25BAF12100F94731 /* Periodo */,
+				848DC11E25BAF11B00F94731 /* Home */,
+				848DC11525BAF08000F94731 /* Main */,
 				84088E0525B9E50700264589 /* Api */,
 				84088DB925B9D65900264589 /* Helpers */,
 				84088D8B25B9D59A00264589 /* TofyWalletApp.swift */,
@@ -201,6 +213,38 @@
 				84088E1025B9E5C800264589 /* Usuario.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		848DC11525BAF08000F94731 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				848DC11625BAF09200F94731 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		848DC11E25BAF11B00F94731 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				848DC12125BAF14300F94731 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		848DC11F25BAF12100F94731 /* Periodo */ = {
+			isa = PBXGroup;
+			children = (
+				848DC12925BAF14F00F94731 /* PeriodoView.swift */,
+			);
+			path = Periodo;
+			sourceTree = "<group>";
+		};
+		848DC12025BAF13200F94731 /* Historico */ = {
+			isa = PBXGroup;
+			children = (
+				848DC13125BAF17800F94731 /* HistoricoView.swift */,
+			);
+			path = Historico;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84088DF825B9DA1700264589 /* BiometriaHelper.swift in Sources */,
+				848DC12225BAF14300F94731 /* HomeView.swift in Sources */,
+				848DC11725BAF09200F94731 /* MainView.swift in Sources */,
 				84088D8E25B9D59A00264589 /* ContentView.swift in Sources */,
+				848DC12A25BAF14F00F94731 /* PeriodoView.swift in Sources */,
 				84088DF125B9D9E800264589 /* Extensions.swift in Sources */,
 				84088DC525B9D73A00264589 /* TextView.swift in Sources */,
 				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,
@@ -351,6 +398,7 @@
 				84088DEA25B9D98800264589 /* Modifiers.swift in Sources */,
 				84088E1125B9E5C800264589 /* Usuario.swift in Sources */,
 				84088DDA25B9D8A100264589 /* LottieView.swift in Sources */,
+				848DC13225BAF17800F94731 /* HistoricoView.swift in Sources */,
 				84088D8C25B9D59A00264589 /* TofyWalletApp.swift in Sources */,
 				84088DCC25B9D80900264589 /* Botones.swift in Sources */,
 			);
@@ -531,6 +579,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TofyWallet/Preview Content\"";
+				DEVELOPMENT_TEAM = D5PK29TDFS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TofyWallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -552,6 +601,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TofyWallet/Preview Content\"";
+				DEVELOPMENT_TEAM = D5PK29TDFS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TofyWallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
