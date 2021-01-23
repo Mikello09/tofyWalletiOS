@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct HistoricoView: View {
+    
+    @Binding var showLoader: Bool
+    
     var body: some View {
-        Text("HISTORICO")
-    }
-}
-
-struct HistoricoView_Previews: PreviewProvider {
-    static var previews: some View {
-        HistoricoView()
+        VStack{
+            Text("HISTORICO")
+        }
     }
 }

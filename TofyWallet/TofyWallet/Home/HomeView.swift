@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @Binding var showLoader: Bool
+    
     var body: some View {
-        Text("HOME")
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+        VStack{
+            Text("HOME")
+        }
     }
 }

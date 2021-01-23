@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct PeriodoView: View {
+    
+    @Binding var showLoader: Bool
+    
     var body: some View {
-        Text("PERIODO")
+        VStack{
+            Text("PERIODO")
+        }
     }
 }

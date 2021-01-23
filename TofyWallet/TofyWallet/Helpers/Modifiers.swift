@@ -47,6 +47,9 @@ extension View {
     func navigationBarColor(_ backgroundColor: UIColor?, _ titulo: String, _ backAction: @escaping () -> ()) -> some View {
         self.modifier(TofyNavigator(backgroundColor: backgroundColor, titulo: titulo, backAction: backAction))
     }
+    func navigationBarColorWithoutBack(_ backgroundColor: UIColor?, _ titulo: String) -> some View {
+        self.modifier(TofyNavigatorWithoutBack(backgroundColor: backgroundColor, titulo: titulo))
+    }
 }
 
 struct TofyNavigator: ViewModifier{
@@ -94,3 +97,43 @@ struct TofyNavigator: ViewModifier{
             })
     }
 }
+
+struct TofyNavigatorWithoutBack: ViewModifier{
+    
+    var backgroundColor: UIColor?
+    var titulo: String
+        
+    init(backgroundColor: UIColor?, titulo: String) {
+        self.backgroundColor = backgroundColor
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithTransparentBackground()
+        coloredAppearance.backgroundColor = .clear
+        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().compactAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+        UINavigationBar.appearance().tintColor = .white
+        
+        self.titulo = titulo
+    }
+    
+    func body(content: Content) -> some View{
+        ZStack{
+            content
+            VStack {
+                GeometryReader { geometry in
+                    Color(self.backgroundColor ?? .clear)
+                        .frame(height: geometry.safeAreaInsets.top)
+                        .edgesIgnoringSafeArea(.top)
+                    Spacer()
+                }
+            }
+        }
+        .navigationBarHidden(false)
+        .navigationBarTitle(titulo, displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
+    }
+}
+

@@ -51,6 +51,8 @@
 		848DC12225BAF14300F94731 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC12125BAF14300F94731 /* HomeView.swift */; };
 		848DC12A25BAF14F00F94731 /* PeriodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC12925BAF14F00F94731 /* PeriodoView.swift */; };
 		848DC13225BAF17800F94731 /* HistoricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC13125BAF17800F94731 /* HistoricoView.swift */; };
+		848DC16525BC25E600F94731 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC16425BC25E600F94731 /* InitialView.swift */; };
+		848DC16A25BC27CE00F94731 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC16925BC27CE00F94731 /* InitialViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		848DC12125BAF14300F94731 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		848DC12925BAF14F00F94731 /* PeriodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoView.swift; sourceTree = "<group>"; };
 		848DC13125BAF17800F94731 /* HistoricoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoView.swift; sourceTree = "<group>"; };
+		848DC16425BC25E600F94731 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		848DC16925BC27CE00F94731 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				848DC11625BAF09200F94731 /* MainView.swift */,
+				848DC16425BC25E600F94731 /* InitialView.swift */,
+				848DC16925BC27CE00F94731 /* InitialViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -390,7 +396,9 @@
 				848DC11725BAF09200F94731 /* MainView.swift in Sources */,
 				84088D8E25B9D59A00264589 /* ContentView.swift in Sources */,
 				848DC12A25BAF14F00F94731 /* PeriodoView.swift in Sources */,
+				848DC16A25BC27CE00F94731 /* InitialViewModel.swift in Sources */,
 				84088DF125B9D9E800264589 /* Extensions.swift in Sources */,
+				848DC16525BC25E600F94731 /* InitialView.swift in Sources */,
 				84088DC525B9D73A00264589 /* TextView.swift in Sources */,
 				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,
 				84088DD325B9D85A00264589 /* BaseView.swift in Sources */,

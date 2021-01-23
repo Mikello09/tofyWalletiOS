@@ -22,7 +22,7 @@ enum TabItem: Int{
     
     func getTitulo() -> String{
         switch self {
-        case .home: return "Global"
+        case .home: return "Home"
         case .periodo: return "Periodo"
         case .historico: return "Historico"
         }
@@ -32,26 +32,27 @@ enum TabItem: Int{
 struct MainView: View {
     
     @State private var seleccion: TabItem = .home
-    
-    init(){
-        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
-    }
+    @State var mainLoader: Bool = false
     
     var body: some View {
-        TabView(selection:$seleccion){
-            PeriodoView()
-                .tabItem {
-                    TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.periodo)
-                }.tag(TabItem.periodo)
-            HomeView()
-                .tabItem {
-                    TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.home)
-                }.tag(TabItem.home)
-            HistoricoView()
-                .tabItem {
-                    TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.historico)
-                }.tag(TabItem.historico)
-        }
+        BaseView(showLoader: $mainLoader, content:
+            TabView(selection:$seleccion){
+                PeriodoView(showLoader: $mainLoader)
+                    .tabItem {
+                        TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.periodo)
+                    }.tag(TabItem.periodo)
+                HomeView(showLoader: $mainLoader)
+                    .tabItem {
+                        TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.home)
+                    }.tag(TabItem.home)
+                HistoricoView(showLoader: $mainLoader)
+                    .tabItem {
+                        TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.historico)
+                    }.tag(TabItem.historico)
+            },
+                 titulo: seleccion.getTitulo(),
+                 atras: false
+         )
     }
 }
 
@@ -65,10 +66,11 @@ struct TabBottonView: View {
             self.selection = self.tabBarItem
         }) {
             VStack(alignment: .center) {
+                Spacer()
                 Image(tabBarItem.getIcono() + ((selection == tabBarItem) ? "_on" : ""))
                     .renderingMode(.original)
                     .frame(width: 24.0, height: 24.0)
-                Text(tabBarItem.getTitulo()).info()
+                Spacer()
             }.padding([.leading,.trailing])
         }
     }

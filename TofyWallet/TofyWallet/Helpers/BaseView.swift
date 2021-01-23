@@ -15,12 +15,19 @@ struct BaseView<Content>: View where Content: View{
     
     var content: Content
     var titulo: String?
+    var atras: Bool = true
     
     var body: some View {
         ZStack{
             if titulo != nil{
-                content
-                    .navigationBarColor(.principal, titulo ?? "", goBack)
+                if atras {
+                    content
+                        .navigationBarColor(.principal, titulo ?? "", goBack)
+                } else {
+                    content
+                        .navigationBarColorWithoutBack(.principal, titulo ?? "")
+                }
+                
             } else {
                 content
                     .navigationBarHidden(true)
