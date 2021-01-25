@@ -53,6 +53,13 @@
 		848DC13225BAF17800F94731 /* HistoricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC13125BAF17800F94731 /* HistoricoView.swift */; };
 		848DC16525BC25E600F94731 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC16425BC25E600F94731 /* InitialView.swift */; };
 		848DC16A25BC27CE00F94731 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC16925BC27CE00F94731 /* InitialViewModel.swift */; };
+		848DC17025BC62ED00F94731 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC16F25BC62ED00F94731 /* LoginView.swift */; };
+		848DC17825BC642400F94731 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC17725BC642400F94731 /* LoginViewModel.swift */; };
+		848DC17E25BC685E00F94731 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 848DC17D25BC685E00F94731 /* loading.json */; };
+		848DC18325BCDA4F00F94731 /* HomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC18225BCDA4F00F94731 /* HomeItemView.swift */; };
+		848DC18925BCDBEF00F94731 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC18825BCDBEF00F94731 /* HomeViewModel.swift */; };
+		84B369D625BD810A00CCD552 /* GrupoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B369D525BD810A00CCD552 /* GrupoView.swift */; };
+		84B369DB25BD867300CCD552 /* GrupoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B369DA25BD867300CCD552 /* GrupoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +109,13 @@
 		848DC13125BAF17800F94731 /* HistoricoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoView.swift; sourceTree = "<group>"; };
 		848DC16425BC25E600F94731 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		848DC16925BC27CE00F94731 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		848DC16F25BC62ED00F94731 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		848DC17725BC642400F94731 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		848DC17D25BC685E00F94731 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		848DC18225BCDA4F00F94731 /* HomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemView.swift; sourceTree = "<group>"; };
+		848DC18825BCDBEF00F94731 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		84B369D525BD810A00CCD552 /* GrupoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrupoView.swift; sourceTree = "<group>"; };
+		84B369DA25BD867300CCD552 /* GrupoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrupoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +167,7 @@
 		84088D8A25B9D59A00264589 /* TofyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				848DC16E25BC62DF00F94731 /* Login */,
 				848DC12025BAF13200F94731 /* Historico */,
 				848DC11F25BAF12100F94731 /* Periodo */,
 				848DC11E25BAF11B00F94731 /* Home */,
@@ -197,6 +212,7 @@
 		84088DB925B9D65900264589 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				848DC17C25BC683B00F94731 /* LottieFiles */,
 				84088DBA25B9D66B00264589 /* Colores.swift */,
 				84088DC425B9D73A00264589 /* TextView.swift */,
 				84088DCB25B9D80900264589 /* Botones.swift */,
@@ -232,7 +248,10 @@
 		848DC11E25BAF11B00F94731 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				84B369D425BD80F900CCD552 /* Grupo */,
+				848DC18725BCDBC900F94731 /* Componentes */,
 				848DC12125BAF14300F94731 /* HomeView.swift */,
+				848DC18825BCDBEF00F94731 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -251,6 +270,40 @@
 				848DC13125BAF17800F94731 /* HistoricoView.swift */,
 			);
 			path = Historico;
+			sourceTree = "<group>";
+		};
+		848DC16E25BC62DF00F94731 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				848DC16F25BC62ED00F94731 /* LoginView.swift */,
+				848DC17725BC642400F94731 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		848DC17C25BC683B00F94731 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				848DC17D25BC685E00F94731 /* loading.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		848DC18725BCDBC900F94731 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				848DC18225BCDA4F00F94731 /* HomeItemView.swift */,
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
+		84B369D425BD80F900CCD552 /* Grupo */ = {
+			isa = PBXGroup;
+			children = (
+				84B369D525BD810A00CCD552 /* GrupoView.swift */,
+				84B369DA25BD867300CCD552 /* GrupoViewModel.swift */,
+			);
+			path = Grupo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +417,7 @@
 			files = (
 				84088D9325B9D59D00264589 /* Preview Assets.xcassets in Resources */,
 				84088DFF25B9DA5500264589 /* Localizable.strings in Resources */,
+				848DC17E25BC685E00F94731 /* loading.json in Resources */,
 				84088D9025B9D59D00264589 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,14 +445,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B369DB25BD867300CCD552 /* GrupoViewModel.swift in Sources */,
+				84B369D625BD810A00CCD552 /* GrupoView.swift in Sources */,
 				84088DF825B9DA1700264589 /* BiometriaHelper.swift in Sources */,
+				848DC18925BCDBEF00F94731 /* HomeViewModel.swift in Sources */,
 				848DC12225BAF14300F94731 /* HomeView.swift in Sources */,
 				848DC11725BAF09200F94731 /* MainView.swift in Sources */,
 				84088D8E25B9D59A00264589 /* ContentView.swift in Sources */,
+				848DC18325BCDA4F00F94731 /* HomeItemView.swift in Sources */,
 				848DC12A25BAF14F00F94731 /* PeriodoView.swift in Sources */,
 				848DC16A25BC27CE00F94731 /* InitialViewModel.swift in Sources */,
 				84088DF125B9D9E800264589 /* Extensions.swift in Sources */,
 				848DC16525BC25E600F94731 /* InitialView.swift in Sources */,
+				848DC17825BC642400F94731 /* LoginViewModel.swift in Sources */,
 				84088DC525B9D73A00264589 /* TextView.swift in Sources */,
 				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,
 				84088DD325B9D85A00264589 /* BaseView.swift in Sources */,
@@ -407,6 +466,7 @@
 				84088E1125B9E5C800264589 /* Usuario.swift in Sources */,
 				84088DDA25B9D8A100264589 /* LottieView.swift in Sources */,
 				848DC13225BAF17800F94731 /* HistoricoView.swift in Sources */,
+				848DC17025BC62ED00F94731 /* LoginView.swift in Sources */,
 				84088D8C25B9D59A00264589 /* TofyWalletApp.swift in Sources */,
 				84088DCC25B9D80900264589 /* Botones.swift in Sources */,
 			);

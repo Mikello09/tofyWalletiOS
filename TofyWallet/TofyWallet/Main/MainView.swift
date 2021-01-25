@@ -22,7 +22,7 @@ enum TabItem: Int{
     
     func getTitulo() -> String{
         switch self {
-        case .home: return "Home"
+        case .home: return "\("greeting".localized) \(getUsuario().nombre ?? "")"
         case .periodo: return "Periodo"
         case .historico: return "Historico"
         }

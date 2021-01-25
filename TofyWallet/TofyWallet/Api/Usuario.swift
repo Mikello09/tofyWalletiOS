@@ -46,11 +46,12 @@ struct Usuario: Codable{
     var pin: String?
 }
 
-func guardarUsuario(email: String, pass: String, token: String, nombre: String){
+func guardarUsuario(email: String, pass: String, token: String, nombre: String, grupo: String){
     UserDefaults.standard.setValue(email, forKey: "email")
     UserDefaults.standard.setValue(pass, forKey: "pass")
     UserDefaults.standard.setValue(token, forKey: "token")
     UserDefaults.standard.setValue(nombre, forKey: "nombre")
+    UserDefaults.standard.setValue(grupo, forKey: "grupo")
 }
 
 func guardarTipoSeguridad(tipo: TipoSeguridad){

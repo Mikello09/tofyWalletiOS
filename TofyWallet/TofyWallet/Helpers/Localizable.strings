@@ -6,7 +6,30 @@
   
 */
 
+//ERROR
+"errorParseo" = "Ha ocurrido un error en el servicio";
 
 //BIOMETRIA
 "activarTouchID" = "Activar Touch ID";
 "activarFaceID" = "Activar Face ID";
+
+
+//LOGIN
+"email" = "Email";
+"pass" = "Contraseña";
+"entrar" = "Entrar";
+
+//HOME
+"greeting" = "Hola";
+"grupo" = "Gestionar grupo";
+"perfil" = "Mi perfil";
+"info" = "App info";
+
+//GRUPO
+"guardar" = "Guardar";
+"nombreGrupo" = "Nombre del grupo";
+"ahorroInicial" = "Ahorro inicial";
+"idGrupo" = "ID grupo";
+"uneteOcrea" = "Únete o crea un grupo para empezar a utilzar Tofy Wallet";
+"unete" = "Únete a un grupo";
+"crea" = "Crea un grupo";

@@ -17,6 +17,12 @@ extension Text{
             .foregroundColor(color)
     }
     
+    func item(color: Color) -> Text{
+        return self
+            .font(.system(size: 18, weight: .semibold, design: .default))
+            .foregroundColor(color)
+    }
+    
     func info() -> Text{
         return self
             .font(.system(size: 16))

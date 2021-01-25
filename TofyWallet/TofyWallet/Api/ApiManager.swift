@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 import Combine
 
-
+let baseUrl: String = "https://tofyserver.herokuapp.com"
+let loginUrl: String = "\(baseUrl)/usuario/doLogin"
 
 let SESION: URLSession = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
     

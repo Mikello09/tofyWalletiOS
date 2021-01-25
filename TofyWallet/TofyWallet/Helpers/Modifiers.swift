@@ -26,9 +26,8 @@ struct CustomEditText: ViewModifier{
                 if imagen != ""{
                     HStack{
                         Spacer()
-                        Image(imagen)
-                            .resizable()
-                            .frame(width: 16, height: 16)
+                        Image(systemName: imagen)
+                            .foregroundColor(.principal)
                     }
                 }
             }

@@ -19,7 +19,11 @@ class InitialViewModel: ObservableObject{
     @Published var inicio: TipoInicio?
     
     func initApp(){
-        inicio = .main
+        if getUsuario().token != ""{
+            inicio = .main
+        } else {
+            inicio = .login
+        }
     }
     
 }

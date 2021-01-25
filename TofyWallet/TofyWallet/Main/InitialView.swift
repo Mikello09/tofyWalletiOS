@@ -21,6 +21,7 @@ struct InitialView: View {
             BaseView(showLoader: $initialShowLoader, content:
                 Group{
                     NavigationLink(destination: MainView(), isActive: $goToMain){EmptyView()}
+                    NavigationLink(destination: LoginView(), isActive: $goToLogin){EmptyView()}
                 }
             )
         }
