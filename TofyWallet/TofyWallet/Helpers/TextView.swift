@@ -13,6 +13,12 @@ extension Text{
     
     func titulo(color: Color) -> Text{
         return self
+            .font(.system(size: 24, weight: .semibold, design: .default))
+            .foregroundColor(color)
+    }
+    
+    func subtitulo(color: Color) -> Text{
+        return self
             .font(.system(size: 21, weight: .semibold, design: .default))
             .foregroundColor(color)
     }
@@ -27,6 +33,12 @@ extension Text{
         return self
             .font(.system(size: 16))
             .foregroundColor(Color.negro)
+    }
+    
+    func infoImportante() -> Text{
+        return self
+            .font(.system(size: 18, weight: .semibold, design: .default))
+            .foregroundColor(.negro)
     }
     
     func error() -> Text{

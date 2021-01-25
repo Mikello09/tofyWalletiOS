@@ -38,9 +38,9 @@ class LoginViewModel: ObservableObject{
             case .finished:()
             }
         }, receiveValue: { response in
-            guardarUsuario(email: response.usuario.email,
-                           pass: response.usuario.pass,
-                           token: response.usuario.token,
+            guardarUsuario(email: response.usuario.email ?? "",
+                           pass: response.usuario.pass ?? "",
+                           token: response.usuario.token ?? "",
                            nombre: response.usuario.nombre ?? "",
                            grupo: response.usuario.grupo ?? "")
             self.loginOk = true

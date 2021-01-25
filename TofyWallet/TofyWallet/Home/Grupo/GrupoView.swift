@@ -22,6 +22,9 @@ struct GrupoView: View {
     @State var ahorroInicial: String = ""
     @State var errorCrearGrupo: String = ""
     
+    //GRUPO
+    @State var grupo: Grupo = Grupo()
+    
     @State var showLoader: Bool = false
     
     var body: some View {
@@ -91,7 +94,7 @@ struct GrupoView: View {
                             .padding([.leading, .trailing])
                         }
                     } else {//CON GRUPO
-                         
+                        ConGrupoView(grupo: $grupo, anadirCategoria: anadirCategoria)
                     }
                 }
                 Spacer()
@@ -104,6 +107,15 @@ struct GrupoView: View {
         .onReceive(viewModel.$estado){ value in
             estado = value
         }
+        .onReceive(viewModel.$grupo){ value in
+            if let grupoDelUsuario = value{
+                self.grupo = grupoDelUsuario
+            }
+        }
+    }
+    
+    func anadirCategoria(categoria: Categoria){
+        
     }
 }
 

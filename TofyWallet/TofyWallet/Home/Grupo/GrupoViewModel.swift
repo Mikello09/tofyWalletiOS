@@ -18,11 +18,22 @@ enum GrupoEstado {
 class GrupoViewModel: ObservableObject{
     
     @Published var estado: GrupoEstado?
+    @Published var grupo: Grupo?
     
     func getGrupoEstado(){
-        if getUsuario().grupo == ""{
+        if getUsuario().grupo != ""{
             estado = .unirGrupo
         } else {
+            grupo = Grupo(token: "A34ADA",
+                          nombre: "Lopez Garcia Family",
+                          mienbros: [Usuario(email: "mikelsalazarlopez@gmail.com",
+                                            pass: "asdfasd",
+                                            token: "asdfas",
+                                            nombre: "Mikel",
+                                            grupo: "asdf",
+                                            tipoSeguridad: .ninguna,
+                                            pin: "asdf")],
+                          categorias: [])
             estado = .conGrupo
         }
     }

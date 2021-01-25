@@ -36,10 +36,10 @@ enum TipoSeguridad: String, Codable{
     }
 }
 
-struct Usuario: Codable{
-    var email: String
-    var pass: String
-    var token: String
+struct Usuario: Codable, Hashable{
+    var email: String?
+    var pass: String?
+    var token: String?
     var nombre: String?
     var grupo: String?
     var tipoSeguridad: TipoSeguridad?

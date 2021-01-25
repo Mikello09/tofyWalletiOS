@@ -60,6 +60,10 @@
 		848DC18925BCDBEF00F94731 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DC18825BCDBEF00F94731 /* HomeViewModel.swift */; };
 		84B369D625BD810A00CCD552 /* GrupoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B369D525BD810A00CCD552 /* GrupoView.swift */; };
 		84B369DB25BD867300CCD552 /* GrupoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B369DA25BD867300CCD552 /* GrupoViewModel.swift */; };
+		84B369E325BEC9D000CCD552 /* Grupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B369E225BEC9D000CCD552 /* Grupo.swift */; };
+		84B369E825BED0F500CCD552 /* ConGrupoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B369E725BED0F500CCD552 /* ConGrupoView.swift */; };
+		84B369FA25BEF86000CCD552 /* CategoriasImagenPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B369F925BEF86000CCD552 /* CategoriasImagenPopup.swift */; };
+		84B36A1A25BF144E00CCD552 /* CategoriasImagenesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B36A1925BF144E00CCD552 /* CategoriasImagenesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,10 @@
 		848DC18825BCDBEF00F94731 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		84B369D525BD810A00CCD552 /* GrupoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrupoView.swift; sourceTree = "<group>"; };
 		84B369DA25BD867300CCD552 /* GrupoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrupoViewModel.swift; sourceTree = "<group>"; };
+		84B369E225BEC9D000CCD552 /* Grupo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grupo.swift; sourceTree = "<group>"; };
+		84B369E725BED0F500CCD552 /* ConGrupoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConGrupoView.swift; sourceTree = "<group>"; };
+		84B369F925BEF86000CCD552 /* CategoriasImagenPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasImagenPopup.swift; sourceTree = "<group>"; };
+		84B36A1925BF144E00CCD552 /* CategoriasImagenesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasImagenesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +220,7 @@
 		84088DB925B9D65900264589 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84B369F825BEF84B00CCD552 /* Popup */,
 				848DC17C25BC683B00F94731 /* LottieFiles */,
 				84088DBA25B9D66B00264589 /* Colores.swift */,
 				84088DC425B9D73A00264589 /* TextView.swift */,
@@ -231,6 +240,7 @@
 			children = (
 				84088E0625B9E53D00264589 /* ApiManager.swift */,
 				84088E1025B9E5C800264589 /* Usuario.swift */,
+				84B369E225BEC9D000CCD552 /* Grupo.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -302,8 +312,18 @@
 			children = (
 				84B369D525BD810A00CCD552 /* GrupoView.swift */,
 				84B369DA25BD867300CCD552 /* GrupoViewModel.swift */,
+				84B369E725BED0F500CCD552 /* ConGrupoView.swift */,
+				84B36A1925BF144E00CCD552 /* CategoriasImagenesViewModel.swift */,
 			);
 			path = Grupo;
+			sourceTree = "<group>";
+		};
+		84B369F825BEF84B00CCD552 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				84B369F925BEF86000CCD552 /* CategoriasImagenPopup.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +467,7 @@
 			files = (
 				84B369DB25BD867300CCD552 /* GrupoViewModel.swift in Sources */,
 				84B369D625BD810A00CCD552 /* GrupoView.swift in Sources */,
+				84B369E325BEC9D000CCD552 /* Grupo.swift in Sources */,
 				84088DF825B9DA1700264589 /* BiometriaHelper.swift in Sources */,
 				848DC18925BCDBEF00F94731 /* HomeViewModel.swift in Sources */,
 				848DC12225BAF14300F94731 /* HomeView.swift in Sources */,
@@ -458,7 +479,10 @@
 				84088DF125B9D9E800264589 /* Extensions.swift in Sources */,
 				848DC16525BC25E600F94731 /* InitialView.swift in Sources */,
 				848DC17825BC642400F94731 /* LoginViewModel.swift in Sources */,
+				84B369FA25BEF86000CCD552 /* CategoriasImagenPopup.swift in Sources */,
 				84088DC525B9D73A00264589 /* TextView.swift in Sources */,
+				84B369E825BED0F500CCD552 /* ConGrupoView.swift in Sources */,
+				84B36A1A25BF144E00CCD552 /* CategoriasImagenesViewModel.swift in Sources */,
 				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,
 				84088DD325B9D85A00264589 /* BaseView.swift in Sources */,
 				84088E0725B9E53D00264589 /* ApiManager.swift in Sources */,
