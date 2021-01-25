@@ -20,7 +20,7 @@ struct Grupo: Codable {
     var categorias: [Categoria]?
 }
 
-struct Categoria: Codable {
+struct Categoria: Codable, Hashable {
     var token: String?
     var titulo: String?
     var imagen: String?

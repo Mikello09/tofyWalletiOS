@@ -39,3 +39,7 @@
 "categoria" = "Categoría";
 "anadir" = "Añadir";
 "eligeImagenCategoria" = "Elige la imagen que irá asociada a la categoría";
+"editarCategoria" = "Editar categoría";
+"editar" = "Editar";
+"gasto" = "Gasto";
+"ingreso" = "Ingreso";

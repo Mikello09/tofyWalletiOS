@@ -19,6 +19,9 @@ struct ConGrupoView: View {
     @State var eligiendoImagen: Bool = false
     @State var tipoCategoria: TipoCategoria = .gasto
     
+    //EDITAR CATEGORIA
+    @State var editandoCategorias: Bool = false
+    
     var body: some View {
         ZStack{
             ScrollView(.vertical, showsIndicators: false){
@@ -67,6 +70,16 @@ struct ConGrupoView: View {
                 HStack{
                     Text("categorias".localized)
                         .subtitulo(color: .negro)
+                    if (grupo.categorias ?? []).count > 0{
+                        Image(systemName: "pencil.circle.fill")
+                            .resizable()
+                            .foregroundColor(.principal)
+                            .frame(width: 24, height: 24)
+                            .padding(.leading)
+                            .onTapGesture {
+                                self.editandoCategorias.toggle()
+                            }
+                    }
                     Spacer()
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -94,6 +107,7 @@ struct ConGrupoView: View {
                                     .padding(.trailing)
                                     .onTapGesture {
                                         anadiendoCategoria = false
+                                        imagenCategoria = .interrogante
                                     }
                             }
                             .padding([.leading, .top, .bottom])
@@ -135,7 +149,7 @@ struct ConGrupoView: View {
                                     .onTapGesture {
                                         self.tipoCategoria = .gasto
                                     }
-                                    Text("Gasto")
+                                    Text("gasto".localized)
                                         .info()
                                     Spacer()
                                 }
@@ -156,7 +170,7 @@ struct ConGrupoView: View {
                                     .onTapGesture {
                                         self.tipoCategoria = .ingreso
                                     }
-                                    Text("Ingreso")
+                                    Text("ingreso".localized)
                                         .info()
                                         .padding(.trailing)
                                     Spacer()
@@ -176,6 +190,15 @@ struct ConGrupoView: View {
                     .shadow(color: .gris, radius: 5.0, x: 3.0, y: 3.0)
                     .padding()
                 }
+                if !editandoCategorias{
+                    ForEach(grupo.categorias ?? [], id: \.self){ categoria in
+                        CategoriaItem(categoria: categoria)
+                    }
+                } else {
+                    ForEach(grupo.categorias ?? [], id: \.self){ categoria in
+                        CategoriaEditandoItem(categoria: categoria, categoriaEditada: categoriaEditada)
+                    }
+                }
                 
             }
             if eligiendoImagen{
@@ -184,6 +207,10 @@ struct ConGrupoView: View {
                 })
             }
         }
+        
+    }
+    
+    func categoriaEditada(categoria: Categoria){
         
     }
 }

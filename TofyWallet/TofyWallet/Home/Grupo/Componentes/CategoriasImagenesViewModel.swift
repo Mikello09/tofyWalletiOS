@@ -13,7 +13,7 @@ import Combine
 enum CategoriaImage: String{
     case comida = "comida"
     case deporte = "deporte"
-    case casa = "case"
+    case casa = "casa"
     case persona = "persona"
     case ocio = "ocio"
     case restaurante = "restaurante"
@@ -34,6 +34,7 @@ enum CategoriaImage: String{
     case herramientas = "herramientas"
     case bicicleta = "bicicleta"
     case interrogante = "interrogante"
+    case ingreso = "ingreso"
     
     func getImage() -> String{
         switch self {
@@ -60,6 +61,7 @@ enum CategoriaImage: String{
         case .herramientas: return "wrench.and.screwdriver"
         case .bicicleta: return "bicycle"
         case .interrogante: return "questionmark.circle.fill"
+        case .ingreso: return "dollarsign.square.fill"
         }
     }
 }
@@ -92,9 +94,43 @@ class CategoriasImagenesViewModel: ObservableObject{
                     .juegos,
                     .herramientas,
                     .bicicleta,
-                    .interrogante]
+                    .interrogante,
+                    .ingreso]
     }
     
     
     
 }
+
+extension String{
+    func toSystemImage() -> String{
+        switch self{
+        case "comida": return "cart.fill"
+        case "deporte": return "sportscourt.fill"
+        case "casa": return "house.fill"
+        case "persona": return "person.fill"
+        case "ocio": return "die.face.5.fill"
+        case "restaurante": return "ant.fill"
+        case "telefono": return "phone.fill"
+        case "transporte": return "tram.fill"
+        case "coche": return "car.fill"
+        case "viajes": return "airplane"
+        case "amigos": return "person.3.fill"
+        case "hipoteca": return "creditcard.fill"
+        case "medicina": return "bandage.fill"
+        case "libros": return "books.vertical.fill"
+        case "entradas": return "ticket.fill"
+        case "estudio": return "graduationcap.fill"
+        case "musica": return "music.quarternote.3"
+        case "ropa": return "eyebrow"
+        case "regalos": return "gift.fill"
+        case "juegos": return "gamecontroller.fill"
+        case "herramientas": return "wrench.and.screwdriver"
+        case "bicicleta": return "bicycle"
+        case "interrogante": return "questionmark.circle.fill"
+        case "ingreso": return "dollarsign.square.fill"
+        default: return "questionmark.circle.fill"
+        }
+    }
+}
+

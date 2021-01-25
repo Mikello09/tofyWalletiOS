@@ -29,10 +29,10 @@ extension Text{
             .foregroundColor(color)
     }
     
-    func info() -> Text{
+    func info(color: Color = .negro) -> Text{
         return self
             .font(.system(size: 16))
-            .foregroundColor(Color.negro)
+            .foregroundColor(color)
     }
     
     func infoImportante() -> Text{

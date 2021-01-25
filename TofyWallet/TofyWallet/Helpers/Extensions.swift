@@ -18,4 +18,13 @@ extension String{
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
     }
+    
+    func toCategoriaTipo() -> TipoCategoria{
+        switch self {
+        case "Gasto":
+            return .gasto
+        default:
+            return .ingreso
+        }
+    }
 }

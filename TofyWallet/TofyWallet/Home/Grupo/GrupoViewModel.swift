@@ -33,7 +33,18 @@ class GrupoViewModel: ObservableObject{
                                             grupo: "asdf",
                                             tipoSeguridad: .ninguna,
                                             pin: "asdf")],
-                          categorias: [])
+                          categorias: [Categoria(token: "asdf",
+                                                 titulo: "Comida",
+                                                 imagen: "comida",
+                                                 tipo: "Gasto"),
+                                      Categoria(token: "asdfas",
+                                                titulo: "Casa",
+                                                imagen: "casa",
+                                                tipo: "Gasto"),
+                                      Categoria(token: "asdfas",
+                                                titulo: "Nómina",
+                                                imagen: "ingreso",
+                                                tipo: "Ingreso")])
             estado = .conGrupo
         }
     }
