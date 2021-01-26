@@ -8,15 +8,16 @@
 import Foundation
 import SwiftUI
 
-enum TipoCategoria{
-    case gasto
-    case ingreso
+enum TipoCategoria: String{
+    case gasto = "Gasto"
+    case ingreso = "Ingreso"
 }
 
 struct Grupo: Codable {
     var token: String?
     var nombre: String?
-    var mienbros: [Usuario]?
+    var ahorro: String?
+    var miembros: [Usuario]?
     var categorias: [Categoria]?
 }
 

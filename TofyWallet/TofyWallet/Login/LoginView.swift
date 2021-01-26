@@ -11,16 +11,19 @@ struct LoginView: View {
     
     @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
-    @State var showLoader: Bool = false
-    
     @State var email: String = ""
     @State var pass: String = ""
     
     @State var error: String = ""
     @State var goToMain: Bool = false
     
+    //BASEVIEW
+    @State var showLoader: Bool = false
+    @State var showError: Bool = false
+    @State var errorMessage: String = ""
+    
     var body: some View {
-        BaseView(showLoader: $showLoader, content:
+        BaseView(showLoader: $showLoader, showError: $showError, errorMessage: $errorMessage, content:
             VStack{
                 TextField("email".localized, text: $email)
                     .foregroundColor(.negro)

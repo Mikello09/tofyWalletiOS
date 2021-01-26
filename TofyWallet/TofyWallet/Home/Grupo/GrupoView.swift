@@ -25,10 +25,13 @@ struct GrupoView: View {
     //GRUPO
     @State var grupo: Grupo = Grupo()
     
+    //BASEVIEW
     @State var showLoader: Bool = false
+    @State var showError: Bool = false
+    @State var errorMessage: String = ""
     
     var body: some View {
-        BaseView(showLoader: $showLoader, content:
+        BaseView(showLoader: $showLoader, showError: $showError, errorMessage: $errorMessage,  content:
             VStack{
                 if estado == nil{
                     EmptyView()
@@ -88,13 +91,16 @@ struct GrupoView: View {
                             }
                             Button(action: {
                                 if nombreGrupo != ""{
+                                    showLoader = true
                                     viewModel.crearGrupo(nombre: nombreGrupo, ahorro: ahorroInicial)
                                 }
                             }){EmptyView()}.buttonStyle(BotonPrincipal(text: "guardar".localized, enabled: nombreGrupo != ""))
                             .padding([.leading, .trailing])
                         }
                     } else {//CON GRUPO
-                        ConGrupoView(grupo: $grupo, anadirCategoria: anadirCategoria)
+                        ConGrupoView(grupo: $grupo,
+                                     anadirCategoria: anadirCategoria,
+                                     editarCategoria: editarCategoria)
                     }
                 }
                 Spacer()
@@ -109,13 +115,27 @@ struct GrupoView: View {
         }
         .onReceive(viewModel.$grupo){ value in
             if let grupoDelUsuario = value{
+                showLoader = false
                 self.grupo = grupoDelUsuario
+            }
+        }
+        .onReceive(viewModel.$error){ value in
+            if let error = value{
+                showLoader = false
+                errorMessage = error
+                showError = true
             }
         }
     }
     
     func anadirCategoria(categoria: Categoria){
-        
+        showLoader = true
+        viewModel.addCategoria(categoria: categoria)
+    }
+    
+    func editarCategoria(categoria: Categoria){
+        showLoader = true
+        viewModel.editarCategoria(categoria: categoria)
     }
 }
 

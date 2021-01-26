@@ -12,6 +12,8 @@ struct BaseView<Content>: View where Content: View{
     @Environment(\.presentationMode) var presentationMode
     
     @Binding var showLoader: Bool
+    @Binding var showError: Bool
+    @Binding var errorMessage: String
     
     var content: Content
     var titulo: String?
@@ -42,7 +44,32 @@ struct BaseView<Content>: View where Content: View{
                         .padding()
                     Spacer()
                 }
-                
+            }
+            if showError{
+                ZStack{
+                    Color.grisTransparente
+                    VStack{
+                        Spacer()
+                        VStack{
+                            Image(systemName: "xmark.octagon.fill")
+                                .resizable()
+                                .foregroundColor(.rojo)
+                                .frame(width: 32, height: 32)
+                                .padding()
+                            Text(errorMessage)
+                                .info()
+                                .padding([.leading, .trailing])
+                            Button(action: {
+                                showError.toggle()
+                            }){EmptyView()}.buttonStyle(BotonPrincipal(text: "aceptar".localized, enabled: true))
+                            .padding()
+                        }
+                        .background(Color.blanco)
+                        .cornerRadius(3)
+                        Spacer()
+                    }
+                    .padding()
+                }
             }
         }
     }

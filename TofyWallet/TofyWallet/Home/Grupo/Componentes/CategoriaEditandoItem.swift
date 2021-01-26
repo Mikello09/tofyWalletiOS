@@ -94,7 +94,10 @@ struct CategoriaEditandoItem: View {
                     }
                     Button(action: {
                         if titulo != ""{
-                            
+                            categoriaEditada(Categoria(token: categoria.token,
+                                                       titulo: titulo,
+                                                       imagen: imagen,
+                                                       tipo: tipo.rawValue))
                         }
                     }){EmptyView()}.buttonStyle(BotonPrincipal(text: "editar".localized, enabled: titulo != ""))
                     .padding()

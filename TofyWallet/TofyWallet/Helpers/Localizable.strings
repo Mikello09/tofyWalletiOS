@@ -6,6 +6,9 @@
   
 */
 
+//INIT
+"cargando" = "Cargando...";
+
 //ERROR
 "errorParseo" = "Ha ocurrido un error en el servicio";
 
@@ -43,3 +46,5 @@
 "editar" = "Editar";
 "gasto" = "Gasto";
 "ingreso" = "Ingreso";
+"aceptar" = "Aceptar";
+"ahorro" = "Ahorro";

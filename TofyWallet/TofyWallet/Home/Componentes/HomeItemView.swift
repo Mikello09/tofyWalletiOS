@@ -30,8 +30,8 @@ enum HomeItem {
     
     func tieneAviso() -> Bool{
         switch self {
-        case .grupo: return true
-        case .perfil: return true
+        case .grupo: return getUsuario().grupo == ""
+        case .perfil: return getUsuario().nombre == ""
         case .info: return false
         }
     }

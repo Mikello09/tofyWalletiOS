@@ -32,20 +32,25 @@ enum TabItem: Int{
 struct MainView: View {
     
     @State private var seleccion: TabItem = .home
-    @State var mainLoader: Bool = false
+    
+    
+    //BASEVIEW
+    @State var showLoader: Bool = false
+    @State var showError: Bool = false
+    @State var errorMessage: String = ""
     
     var body: some View {
-        BaseView(showLoader: $mainLoader, content:
+        BaseView(showLoader: $showLoader, showError: $showError, errorMessage: $errorMessage, content:
             TabView(selection:$seleccion){
-                PeriodoView(showLoader: $mainLoader)
+                PeriodoView(showLoader: $showLoader)
                     .tabItem {
                         TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.periodo)
                     }.tag(TabItem.periodo)
-                HomeView(showLoader: $mainLoader)
+                HomeView(showLoader: $showLoader)
                     .tabItem {
                         TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.home)
                     }.tag(TabItem.home)
-                HistoricoView(showLoader: $mainLoader)
+                HistoricoView(showLoader: $showLoader)
                     .tabItem {
                         TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.historico)
                     }.tag(TabItem.historico)
