@@ -12,6 +12,7 @@ struct ConGrupoView: View {
     @Binding var grupo: Grupo
     var anadirCategoria: (_ categoria: Categoria) -> ()
     var editarCategoria: (_ categoria: Categoria) -> ()
+    var abandonarGrupo: () -> ()
     
     //AÑADIR CATEGORIA
     @State var anadiendoCategoria: Bool = false
@@ -33,9 +34,6 @@ struct ConGrupoView: View {
                         Spacer()
                     }
                     .padding([.top, .leading, .trailing])
-                    Divider()
-                        .background(Color.gris)
-                        .padding([.leading, .trailing, .bottom])
                     HStack{
                         Image(systemName: "tag.fill")
                             .resizable()
@@ -64,7 +62,7 @@ struct ConGrupoView: View {
                             .frame(width: 24, height: 24)
                             .foregroundColor(.verde)
                         Text(grupo.ahorro ?? "")
-                            .info()
+                            .infoImportante()
                         Spacer()
                     }
                     .padding([.leading, .trailing])
@@ -236,6 +234,11 @@ struct ConGrupoView: View {
                             CategoriaEditandoItem(categoria: categoria, categoriaEditada: categoriaEditada)
                         }
                     }
+                    Button(action: {
+                        abandonarGrupo()
+                    }){EmptyView()}.buttonStyle(BotonEliminar(text: "abandonar".localized))
+                    .padding()
+                                                    
                 }
             }
             if eligiendoImagen{

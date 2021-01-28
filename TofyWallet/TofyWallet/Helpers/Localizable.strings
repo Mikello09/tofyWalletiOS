@@ -30,6 +30,8 @@
 
 //GRUPO
 "guardar" = "Guardar";
+"crearBoton" = "Crear grupo";
+"unirBoton" = "Unirse a grupo";
 "nombreGrupo" = "Nombre del grupo";
 "ahorroInicial" = "Ahorro inicial";
 "idGrupo" = "ID grupo";
@@ -48,3 +50,7 @@
 "ingreso" = "Ingreso";
 "aceptar" = "Aceptar";
 "ahorro" = "Ahorro";
+"abandonar" = "Abandonar grupo";
+"si" = "SI";
+"no" = "NO";
+"preguntarAbandonar" = "¿Estás seguro de querer abandonar el grupo";

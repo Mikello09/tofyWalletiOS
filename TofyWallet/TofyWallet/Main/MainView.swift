@@ -12,11 +12,19 @@ enum TabItem: Int{
     case periodo = 1
     case historico = 2
     
-    func getIcono() -> String{
+    func getIconoOn() -> String{
         switch self {
-        case .home: return "tab_home"
-        case .periodo: return "tab_periodo"
-        case .historico: return "tab_historico"
+        case .home: return "house.fill"
+        case .periodo: return "calendar.circle.fill"
+        case .historico: return "doc.text.below.ecg.fill"
+        }
+    }
+    
+    func getIconoOff() -> String{
+        switch self {
+        case .home: return "house"
+        case .periodo: return "calendar.circle"
+        case .historico: return "doc.text.below.ecg"
         }
     }
     
@@ -54,7 +62,7 @@ struct MainView: View {
                     .tabItem {
                         TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.historico)
                     }.tag(TabItem.historico)
-            },
+            }.accentColor(.principal),
                  titulo: seleccion.getTitulo(),
                  atras: false
          )
@@ -72,9 +80,7 @@ struct TabBottonView: View {
         }) {
             VStack(alignment: .center) {
                 Spacer()
-                Image(tabBarItem.getIcono() + ((selection == tabBarItem) ? "_on" : ""))
-                    .renderingMode(.original)
-                    .frame(width: 24.0, height: 24.0)
+                Image(systemName: ((selection == tabBarItem) ? tabBarItem.getIconoOn() : tabBarItem.getIconoOff()))
                 Spacer()
             }.padding([.leading,.trailing])
         }

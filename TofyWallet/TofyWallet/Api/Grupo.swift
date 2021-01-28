@@ -17,6 +17,7 @@ struct Grupo: Codable {
     var token: String?
     var nombre: String?
     var ahorro: String?
+    var periodoActivo: String?
     var miembros: [Usuario]?
     var categorias: [Categoria]?
 }
@@ -28,10 +29,43 @@ struct Categoria: Codable, Hashable {
     var tipo: String?
 }
 
-class GrupoManager{
+class GrupoManager: ObservableObject{
     
     static var shared = GrupoManager()
     
-    var grupo: Grupo = Grupo()
+    
+    @Published var token: String?
+    @Published var nombre: String?
+    @Published var ahorro: String?
+    @Published var periodoActivo: String?
+    @Published var miembros: [Usuario]?
+    @Published var categorias: [Categoria]?
+    
+    func guardarGrupo(grupo: Grupo){
+        self.token = grupo.token
+        self.nombre = grupo.nombre
+        self.ahorro = grupo.ahorro
+        self.periodoActivo = grupo.periodoActivo
+        self.miembros = grupo.miembros
+        self.categorias = grupo.categorias
+    }
+    
+    func updateAhorro(ahorro: String){
+        self.ahorro = ahorro
+    }
+    
+    func updatePeriodoActivo(periodoActivo: String){
+        self.periodoActivo = periodoActivo
+    }
+    
+    func updateCategorias(categoria: Categoria){
+        if self.categorias != nil {
+            var categoriasNuevas = self.categorias!
+            categoriasNuevas.append(categoria)
+            self.categorias = categoriasNuevas
+        } else {
+            self.categorias = [categoria]
+        }
+    }
 
 }

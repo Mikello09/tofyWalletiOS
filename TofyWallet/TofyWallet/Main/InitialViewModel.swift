@@ -34,7 +34,7 @@ class InitialViewModel: ObservableObject{
                     case .finished: ()
                     }
                 }, receiveValue: { response in
-                    GrupoManager.shared.grupo = response.grupo
+                    GrupoManager.shared.guardarGrupo(grupo: response.grupo)
                     self.inicio = .main
                 })
             } else {

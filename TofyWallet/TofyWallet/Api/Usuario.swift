@@ -85,5 +85,9 @@ func eliminarUsuario(){
     UserDefaults.standard.setValue("", forKey: "tipoSeguridad")
     UserDefaults.standard.setValue("", forKey: "pin")
 }
-    
 
+enum EstadoUsuario {
+    case sinGrupo
+    case sinPeriodoActivo
+    case conPeriodoActivo
+}

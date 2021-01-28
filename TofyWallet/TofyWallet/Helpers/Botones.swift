@@ -76,3 +76,54 @@ struct BotonCambianteConImagen: ButtonStyle{
         .frame(height: BUTTON_HEIGHT*2)
     }
 }
+
+struct BotonEliminar: ButtonStyle {
+    
+    var text = ""
+    var color : UIColor = .white
+    
+
+    init(text: String) {
+        
+        self.text = text
+        self.color = UIColor.rojo
+    }
+
+    func makeBody(configuration: Self.Configuration) -> some View {
+        ZStack {
+            Rectangle()
+                .cornerRadius(CGFloat(3.0))
+                .foregroundColor(Color.init(self.color))
+            
+            Text(text)
+                .foregroundColor(.blanco)
+                .font(.system(size: 18, weight: .bold, design: .default))
+        }.frame(height: BUTTON_HEIGHT)
+    }
+}
+
+
+struct BotonEleccion: ButtonStyle {
+    
+    var text = ""
+    var color : UIColor = .white
+    
+
+    init(text: String, color: UIColor) {
+        
+        self.text = text
+        self.color = color
+    }
+
+    func makeBody(configuration: Self.Configuration) -> some View {
+        ZStack {
+            Rectangle()
+                .cornerRadius(CGFloat(3.0))
+                .foregroundColor(Color.init(self.color))
+            
+            Text(text)
+                .foregroundColor(.blanco)
+                .font(.system(size: 18, weight: .bold, design: .default))
+        }.frame(height: BUTTON_HEIGHT)
+    }
+}

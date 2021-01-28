@@ -16,6 +16,7 @@ let getGrupoUrl: String = "\(baseUrl)/grupo/getGrupo"
 let anadirCategoriaUrl: String = "\(baseUrl)/grupo/addCategoria"
 let editarCategoriaUrl: String = "\(baseUrl)/grupo/editarCategoria"
 let unirGrupoUrl: String = "\(baseUrl)/grupo/unirGrupo"
+let abandonarGrupoUrl: String = "\(baseUrl)/grupo/abandonarGrupo"
 
 let SESION: URLSession = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
     
