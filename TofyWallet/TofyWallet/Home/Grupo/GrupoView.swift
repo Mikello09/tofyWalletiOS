@@ -112,6 +112,9 @@ struct GrupoView: View {
                 if preguntaAbandornarGrupo{
                     SiNoPopup(titulo: "\("preguntarAbandonar".localized) \(grupo.nombre ?? "")?", si: abandonarGrupo, no: noAbandonarGrupo)
                 }
+            }
+            .onTapGesture {
+                self.hideKeyboard()
             },titulo: "grupo".localized
         )
         .onAppear{

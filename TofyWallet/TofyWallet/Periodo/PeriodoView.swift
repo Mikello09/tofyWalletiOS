@@ -22,7 +22,7 @@ struct PeriodoView: View {
                     if estado == .sinGrupo{
                         SinGrupoView()
                     } else if estado == .sinPeriodoActivo{
-                        
+                        SinPeriodoView(iniciaPeriodo: iniciaPeriodo)
                     } else {
                         
                     }
@@ -47,5 +47,10 @@ struct PeriodoView: View {
                 self.estado = estadoUsuario
             }
         }
+    }
+    
+    func iniciaPeriodo(titulo: String, ahorroEstimado: String){
+        showLoader = true
+        viewModel.iniciarPeriodo(titulo: titulo, ahorroEstimado: ahorroEstimado)
     }
 }

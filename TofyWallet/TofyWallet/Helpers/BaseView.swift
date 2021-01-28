@@ -37,12 +37,15 @@ struct BaseView<Content>: View where Content: View{
                     .navigationBarBackButtonHidden(true)
             }
             if showLoader{
-                VStack{
-                    Spacer()
-                    LottieView(name: "loading", play: .constant(1), loopFinished: nil)
-                        .frame(width: 300, height: 300)
-                        .padding()
-                    Spacer()
+                ZStack{
+                    Color.grisTransparente
+                    VStack{
+                        Spacer()
+                        LottieView(name: "loading", play: .constant(1), loopFinished: nil)
+                            .frame(width: 300, height: 300)
+                            .padding()
+                        Spacer()
+                    }
                 }
             }
             if showError{

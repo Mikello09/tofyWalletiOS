@@ -51,18 +51,28 @@ struct MainView: View {
         BaseView(showLoader: $showLoader, showError: $showError, errorMessage: $errorMessage, content:
             TabView(selection:$seleccion){
                 PeriodoView(showLoader: $showLoader)
+                    .onTapGesture {
+                        self.hideKeyboard()
+                    }
                     .tabItem {
                         TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.periodo)
                     }.tag(TabItem.periodo)
                 HomeView(showLoader: $showLoader)
+                    .onTapGesture {
+                        self.hideKeyboard()
+                    }
                     .tabItem {
                         TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.home)
                     }.tag(TabItem.home)
                 HistoricoView(showLoader: $showLoader)
+                    .onTapGesture {
+                        self.hideKeyboard()
+                    }
                     .tabItem {
                         TabBottonView(selection: self.$seleccion,tabBarItem: TabItem.historico)
                     }.tag(TabItem.historico)
-            }.accentColor(.principal),
+            }
+            .accentColor(.principal),
                  titulo: seleccion.getTitulo(),
                  atras: false
          )

@@ -26,5 +26,9 @@ class PeriodoViewModel: ObservableObject{
         }
     }
     
+    func iniciarPeriodo(titulo: String, ahorroEstimado: String){
+        
+    }
+    
     
 }

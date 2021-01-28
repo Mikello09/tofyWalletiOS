@@ -50,7 +50,7 @@ struct LoginView: View {
                 .padding()
                 Spacer()
                 Group{
-                    NavigationLink(destination: MainView(), isActive: $goToMain){EmptyView()}
+                    NavigationLink(destination: InitialView(), isActive: $goToMain){EmptyView()}
                 }
             }
             .padding(.top, 64)

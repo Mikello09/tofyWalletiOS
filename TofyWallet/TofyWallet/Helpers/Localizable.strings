@@ -54,3 +54,10 @@
 "si" = "SI";
 "no" = "NO";
 "preguntarAbandonar" = "¿Estás seguro de querer abandonar el grupo";
+
+
+//PERIODO
+"iniciaPeriodo" = "Iniciar periodo";
+"iniciaPeriodoInfo" = "Inicia un periodo";
+"titulo" = "Título";
+"ahorroEstimado" = "Ahorro estimado";
