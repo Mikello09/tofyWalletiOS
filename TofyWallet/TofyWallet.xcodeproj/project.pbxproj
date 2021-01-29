@@ -73,6 +73,9 @@
 		84C0BF2525C40404001381F0 /* BarrasChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF2425C40404001381F0 /* BarrasChart.swift */; };
 		84C0BF2D25C40C4A001381F0 /* PeriodoActivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF2C25C40C4A001381F0 /* PeriodoActivoView.swift */; };
 		84C0BF3225C41AF9001381F0 /* PeriodoActivoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF3125C41AF9001381F0 /* PeriodoActivoViewModel.swift */; };
+		84C0BF3B25C42AEC001381F0 /* AnadirMovimientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF3A25C42AEC001381F0 /* AnadirMovimientoView.swift */; };
+		84C0BF4125C43074001381F0 /* ElegirCategoriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF4025C43074001381F0 /* ElegirCategoriaView.swift */; };
+		84C0BF4925C4308A001381F0 /* ElegirCategoriaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF4825C4308A001381F0 /* ElegirCategoriaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,9 @@
 		84C0BF2425C40404001381F0 /* BarrasChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrasChart.swift; sourceTree = "<group>"; };
 		84C0BF2C25C40C4A001381F0 /* PeriodoActivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoActivoView.swift; sourceTree = "<group>"; };
 		84C0BF3125C41AF9001381F0 /* PeriodoActivoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoActivoViewModel.swift; sourceTree = "<group>"; };
+		84C0BF3A25C42AEC001381F0 /* AnadirMovimientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnadirMovimientoView.swift; sourceTree = "<group>"; };
+		84C0BF4025C43074001381F0 /* ElegirCategoriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirCategoriaView.swift; sourceTree = "<group>"; };
+		84C0BF4825C4308A001381F0 /* ElegirCategoriaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirCategoriaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,8 +273,10 @@
 		84232E7D25C21AB3006E424A /* Componentes */ = {
 			isa = PBXGroup;
 			children = (
+				84C0BF3F25C43065001381F0 /* ElegirCategoria */,
 				84232E7E25C21AC3006E424A /* SinPeriodoView.swift */,
 				84C0BF2C25C40C4A001381F0 /* PeriodoActivoView.swift */,
+				84C0BF3A25C42AEC001381F0 /* AnadirMovimientoView.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -375,6 +383,15 @@
 				84C0BF2425C40404001381F0 /* BarrasChart.swift */,
 			);
 			path = Graficos;
+			sourceTree = "<group>";
+		};
+		84C0BF3F25C43065001381F0 /* ElegirCategoria */ = {
+			isa = PBXGroup;
+			children = (
+				84C0BF4025C43074001381F0 /* ElegirCategoriaView.swift */,
+				84C0BF4825C4308A001381F0 /* ElegirCategoriaViewModel.swift */,
+			);
+			path = ElegirCategoria;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,11 +551,14 @@
 				848DC17825BC642400F94731 /* LoginViewModel.swift in Sources */,
 				84232E7F25C21AC3006E424A /* SinPeriodoView.swift in Sources */,
 				84B369FA25BEF86000CCD552 /* CategoriasImagenPopup.swift in Sources */,
+				84C0BF3B25C42AEC001381F0 /* AnadirMovimientoView.swift in Sources */,
 				84088DC525B9D73A00264589 /* TextView.swift in Sources */,
+				84C0BF4925C4308A001381F0 /* ElegirCategoriaViewModel.swift in Sources */,
 				84232E7625C21860006E424A /* PeriodoViewModel.swift in Sources */,
 				84B369E825BED0F500CCD552 /* ConGrupoView.swift in Sources */,
 				84C0BF2D25C40C4A001381F0 /* PeriodoActivoView.swift in Sources */,
 				84C0BF3225C41AF9001381F0 /* PeriodoActivoViewModel.swift in Sources */,
+				84C0BF4125C43074001381F0 /* ElegirCategoriaView.swift in Sources */,
 				84C0BF2525C40404001381F0 /* BarrasChart.swift in Sources */,
 				84B36A1A25BF144E00CCD552 /* CategoriasImagenesViewModel.swift in Sources */,
 				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,

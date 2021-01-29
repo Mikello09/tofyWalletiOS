@@ -66,3 +66,8 @@
 "dia" = "día";
 "dias" = "días";
 "ahorroActual" = "Ahorro actual";
+"anadirMovimiento" = "Añadir movimiento";
+"movimientos" = "Movimientos";
+"descripcion" = "Descripción";
+"valor" = "Valor";
+"anadirCategoria" = "Añadir categoría";

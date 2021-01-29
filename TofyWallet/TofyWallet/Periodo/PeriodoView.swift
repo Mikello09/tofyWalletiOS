@@ -18,29 +18,58 @@ struct PeriodoView: View {
                                       BarraItem(titulo: "Gastos", valor: 200, color: .rojo)]
     @State var periodo: Periodo = Periodo(titulo: "Enero 2021", ahorroEstimado: "300", fechaInicio: "01-01-2021", fechaFin: "")
     
+    //AÑADIR MOVIMIENTO
+    @State var anadiendoMovimiento: Bool = false
+    @State var categoriaParaAnadir: Categoria?
+    @State var showElegirCategoria: Bool = false
+    
     var body: some View {
-        VStack{
+        ScrollView(.vertical, showsIndicators: false){
             VStack{
                 VStack{
-                    if estado == .sinGrupo{
-                        SinGrupoView()
-                    } else if estado == .sinPeriodoActivo{
-                        SinPeriodoView(iniciaPeriodo: iniciaPeriodo)
-                    } else {
-                        PeriodoActivoView(periodo: periodo, barras: $barras, finalizarPeriodo: finalizarPeriodo)
+                    VStack{
+                        if estado == .sinGrupo{
+                            SinGrupoView()
+                        } else if estado == .sinPeriodoActivo{
+                            SinPeriodoView(iniciaPeriodo: iniciaPeriodo)
+                        } else {
+                            PeriodoActivoView(periodo: periodo, barras: $barras, finalizarPeriodo: finalizarPeriodo)
+                        }
                     }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 250)
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: 250)
+                .background(Color.blanco)
+                .cornerRadius(5.0)
+                .shadow(color: .gris, radius: 5.0, x: 3.0, y: 3.0)
+                .padding()
+                if estado == .conPeriodoActivo{
+                    ZStack{
+                        Text("movimientos".localized)
+                            .infoImportante()
+                        HStack{
+                            Spacer()
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .foregroundColor(.principal)
+                                .frame(width: 24, height: 24)
+                                .onTapGesture {
+                                    categoriaParaAnadir = nil
+                                    anadiendoMovimiento.toggle()
+                                }
+                        }
+                        .padding(.trailing)
+                    }
+                    if anadiendoMovimiento{
+                        AnadirMovimientoView(categoria: $categoriaParaAnadir, elegirCategoria: elegirCategoria)
+                    }
+                    
+                }
+                Spacer()
             }
-            .background(Color.blanco)
-            .cornerRadius(5.0)
-            .shadow(color: .gris, radius: 5.0, x: 3.0, y: 3.0)
-            .padding()
-            if estado == .conPeriodoActivo{
-                
+            .sheet(isPresented: $showElegirCategoria){
+                ElegirCategoriaView(categoriaElegida: $categoriaParaAnadir, isPresenting: $showElegirCategoria)
             }
-            Spacer()
         }
         .onAppear{
             viewModel.getEstado()
@@ -58,6 +87,14 @@ struct PeriodoView: View {
     }
     
     func finalizarPeriodo(){
+        
+    }
+    
+    func elegirCategoria(){
+        showElegirCategoria = true
+    }
+    
+    func anadirMovimiento(){
         
     }
 }
