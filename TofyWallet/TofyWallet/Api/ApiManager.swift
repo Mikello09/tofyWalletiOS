@@ -18,6 +18,10 @@ let editarCategoriaUrl: String = "\(baseUrl)/grupo/editarCategoria"
 let unirGrupoUrl: String = "\(baseUrl)/grupo/unirGrupo"
 let abandonarGrupoUrl: String = "\(baseUrl)/grupo/abandonarGrupo"
 
+let crearPeriodoUrl: String = "\(baseUrl)/periodo/crearPeriodo"//titulo,ahorroEstimado,fechaInicio,grupo
+let finalizarPeriodoUrl: String = "\(baseUrl)/periodo/finalizarPeriodo"//periodoToken,grupo,fechaFin
+let anadirMovimientoUrl: String = "\(baseUrl)/periodo/addMovimiento"//descripcion,categoria,valor,
+
 let SESION: URLSession = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
     
 func crearLlamada<T:Decodable>(url: String,

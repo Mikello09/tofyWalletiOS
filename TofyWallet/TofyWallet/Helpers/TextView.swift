@@ -11,6 +11,12 @@ import SwiftUI
 
 extension Text{
     
+    func setStyle(font: Font.Weight, size: CGFloat, color: UIColor) -> Text{
+        return self
+            .font(.system(size: size, weight: font, design: .default))
+            .foregroundColor(Color.init(color))
+    }
+    
     func titulo(color: Color) -> Text{
         return self
             .font(.system(size: 24, weight: .semibold, design: .default))

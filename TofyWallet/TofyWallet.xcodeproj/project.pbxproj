@@ -70,6 +70,9 @@
 		84B36A1A25BF144E00CCD552 /* CategoriasImagenesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B36A1925BF144E00CCD552 /* CategoriasImagenesViewModel.swift */; };
 		84B36A2025BF239400CCD552 /* CategoriaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B36A1F25BF239400CCD552 /* CategoriaItem.swift */; };
 		84B36A2B25BF2A1F00CCD552 /* CategoriaEditandoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B36A2A25BF2A1F00CCD552 /* CategoriaEditandoItem.swift */; };
+		84C0BF2525C40404001381F0 /* BarrasChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF2425C40404001381F0 /* BarrasChart.swift */; };
+		84C0BF2D25C40C4A001381F0 /* PeriodoActivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF2C25C40C4A001381F0 /* PeriodoActivoView.swift */; };
+		84C0BF3225C41AF9001381F0 /* PeriodoActivoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF3125C41AF9001381F0 /* PeriodoActivoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,9 @@
 		84B36A1925BF144E00CCD552 /* CategoriasImagenesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasImagenesViewModel.swift; sourceTree = "<group>"; };
 		84B36A1F25BF239400CCD552 /* CategoriaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaItem.swift; sourceTree = "<group>"; };
 		84B36A2A25BF2A1F00CCD552 /* CategoriaEditandoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaEditandoItem.swift; sourceTree = "<group>"; };
+		84C0BF2425C40404001381F0 /* BarrasChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrasChart.swift; sourceTree = "<group>"; };
+		84C0BF2C25C40C4A001381F0 /* PeriodoActivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoActivoView.swift; sourceTree = "<group>"; };
+		84C0BF3125C41AF9001381F0 /* PeriodoActivoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoActivoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 		84088D8A25B9D59A00264589 /* TofyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				84C0BF2325C403DC001381F0 /* Graficos */,
 				848DC16E25BC62DF00F94731 /* Login */,
 				848DC12025BAF13200F94731 /* Historico */,
 				848DC11F25BAF12100F94731 /* Periodo */,
@@ -261,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				84232E7E25C21AC3006E424A /* SinPeriodoView.swift */,
+				84C0BF2C25C40C4A001381F0 /* PeriodoActivoView.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 				84232E7D25C21AB3006E424A /* Componentes */,
 				848DC12925BAF14F00F94731 /* PeriodoView.swift */,
 				84232E7525C21860006E424A /* PeriodoViewModel.swift */,
+				84C0BF3125C41AF9001381F0 /* PeriodoActivoViewModel.swift */,
 			);
 			path = Periodo;
 			sourceTree = "<group>";
@@ -358,6 +367,14 @@
 				84B36A2A25BF2A1F00CCD552 /* CategoriaEditandoItem.swift */,
 			);
 			path = Componentes;
+			sourceTree = "<group>";
+		};
+		84C0BF2325C403DC001381F0 /* Graficos */ = {
+			isa = PBXGroup;
+			children = (
+				84C0BF2425C40404001381F0 /* BarrasChart.swift */,
+			);
+			path = Graficos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +537,9 @@
 				84088DC525B9D73A00264589 /* TextView.swift in Sources */,
 				84232E7625C21860006E424A /* PeriodoViewModel.swift in Sources */,
 				84B369E825BED0F500CCD552 /* ConGrupoView.swift in Sources */,
+				84C0BF2D25C40C4A001381F0 /* PeriodoActivoView.swift in Sources */,
+				84C0BF3225C41AF9001381F0 /* PeriodoActivoViewModel.swift in Sources */,
+				84C0BF2525C40404001381F0 /* BarrasChart.swift in Sources */,
 				84B36A1A25BF144E00CCD552 /* CategoriasImagenesViewModel.swift in Sources */,
 				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,
 				84088DD325B9D85A00264589 /* BaseView.swift in Sources */,

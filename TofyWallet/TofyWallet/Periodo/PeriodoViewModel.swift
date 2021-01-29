@@ -15,15 +15,16 @@ class PeriodoViewModel: ObservableObject{
     @Published var estadoUsuario: EstadoUsuario?
     
     func getEstado(){
-        if getUsuario().grupo == ""{
-            estadoUsuario = .sinGrupo
-        } else{
-            if GrupoManager.shared.periodoActivo == "" || GrupoManager.shared.periodoActivo == nil{
-                estadoUsuario = .sinPeriodoActivo
-            } else{
-                estadoUsuario = .conPeriodoActivo
-            }
-        }
+//        if getUsuario().grupo == ""{
+//            estadoUsuario = .sinGrupo
+//        } else{
+//            if GrupoManager.shared.periodoActivo == "" || GrupoManager.shared.periodoActivo == nil{
+//                estadoUsuario = .sinPeriodoActivo
+//            } else{
+//                estadoUsuario = .conPeriodoActivo
+//            }
+//        }
+        estadoUsuario = .conPeriodoActivo
     }
     
     func iniciarPeriodo(titulo: String, ahorroEstimado: String){

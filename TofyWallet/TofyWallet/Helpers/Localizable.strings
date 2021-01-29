@@ -61,3 +61,8 @@
 "iniciaPeriodoInfo" = "Inicia un periodo";
 "titulo" = "Título";
 "ahorroEstimado" = "Ahorro estimado";
+"finPeriodo" = "Fin periodo";
+"desde" = "desde";
+"dia" = "día";
+"dias" = "días";
+"ahorroActual" = "Ahorro actual";

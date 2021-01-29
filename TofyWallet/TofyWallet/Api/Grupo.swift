@@ -29,6 +29,13 @@ struct Categoria: Codable, Hashable {
     var tipo: String?
 }
 
+struct Periodo: Codable, Hashable{
+    var titulo: String?
+    var ahorroEstimado: String?
+    var fechaInicio: String?
+    var fechaFin: String?
+}
+
 class GrupoManager: ObservableObject{
     
     static var shared = GrupoManager()
