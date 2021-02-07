@@ -9,68 +9,81 @@ import SwiftUI
 
 struct AnadirMovimientoView: View {
     
+    @Binding var anadiendoMovimiento: Bool
     @State var descripcion: String = ""
     @State var valor: String = ""
     @Binding var categoria: Categoria?
     
     var elegirCategoria: () -> ()
+    var anadirMovimiento: (String, String, Categoria?) -> ()
     
     var body: some View {
-        VStack{
+        GeometryReader{ geometry in
             VStack{
-                HStack{
-                    Text("anadirMovimiento".localized)
-                        .setStyle(font: .semibold, size: 17, color: .negro)
-                    Spacer()
-                }
-                .padding([.leading,.top],8)
-                TextField("descripcion".localized, text: $descripcion)
-                    .keyboardType(.asciiCapable)
-                    .foregroundColor(.negro)
-                    .modifier(CustomEditText(imagen: "a"))
-                    .padding([.leading, .trailing])
-                TextField("valor".localized, text: $valor)
-                    .keyboardType(.decimalPad)
-                    .foregroundColor(.negro)
-                    .modifier(CustomEditText(imagen: "eurosign.square.fill"))
-                    .padding([.leading, .trailing])
-                if categoria != nil{
-                    CategoriaItem(categoria: categoria!)
-                        .onTapGesture {
-                            self.elegirCategoria()
+                ScrollView(.vertical, showsIndicators: false){
+                    VStack{
+                        HStack{
+                            Text("anadirMovimiento".localized)
+                                .setStyle(font: .semibold, size: 17, color: .negro)
+                                .padding()
+                            Spacer()
+                            Image(systemName: "xmark.square.fill")
+                                .resizable()
+                                .foregroundColor(.rojo)
+                                .frame(width: 24, height: 24)
+                                .padding()
+                                .onTapGesture {
+                                    anadiendoMovimiento = false
+                                }
                         }
-                } else {
-                    HStack{
-                        Text("anadirCategoria".localized)
-                            .setStyle(font: .semibold, size: 21, color: .principal)
-                            .onTapGesture {
-                                self.elegirCategoria()
+                        TextField("descripcion".localized, text: $descripcion)
+                            .keyboardType(.asciiCapable)
+                            .foregroundColor(.negro)
+                            .modifier(CustomEditText(imagen: "a"))
+                            .padding([.leading, .trailing])
+                        TextField("valor".localized, text: $valor)
+                            .keyboardType(.decimalPad)
+                            .foregroundColor(.negro)
+                            .modifier(CustomEditText(imagen: "eurosign.square.fill"))
+                            .padding([.leading, .trailing])
+                        if categoria != nil{
+                            CategoriaItem(categoria: categoria!)
+                                .padding([.leading, .trailing], 8)
+                                .onTapGesture {
+                                    self.elegirCategoria()
+                                }
+                        } else {
+                            HStack{
+                                Text("elegirCategoria".localized)
+                                    .setStyle(font: .semibold, size: 21, color: .principal)
+                                    .onTapGesture {
+                                        self.elegirCategoria()
+                                    }
+                                Image(systemName: "plus.circle.fill")
+                                    .resizable()
+                                    .foregroundColor(.principal)
+                                    .frame(width: 20, height: 20)
+                                    .onTapGesture {
+                                        self.elegirCategoria()
+                                    }
+                                Spacer()
                             }
-                        Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .foregroundColor(.principal)
-                            .frame(width: 20, height: 20)
-                            .onTapGesture {
-                                self.elegirCategoria()
+                            .padding(.leading)
+                            .padding(.top, 8)
+                        }
+                        Button(action: {
+                            if puedeAnadir(){
+                                self.anadirMovimiento(descripcion,valor,categoria)
                             }
-                        Spacer()
+                        }){EmptyView()}.buttonStyle(BotonPrincipal(text: "anadir".localized, enabled: puedeAnadir()))
+                        .padding([.leading, .trailing])
+                        .padding([.top, .bottom],8)
                     }
-                    .padding([.leading, .top])
                 }
-                Button(action: {
-                    if puedeAnadir(){
-                        
-                    }
-                }){EmptyView()}.buttonStyle(BotonPrincipal(text: "anadir".localized, enabled: puedeAnadir()))
-                .padding()
-                
             }
-            .frame(maxWidth: .infinity)
+            .frame(width: geometry.size.width, height: geometry.size.height)
+            .background(Color.blanco)
         }
-        .background(Color.blanco)
-        .cornerRadius(5.0)
-        .shadow(color: .gris, radius: 5.0, x: 3.0, y: 3.0)
-        .padding()
     }
     
     func puedeAnadir() -> Bool{

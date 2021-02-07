@@ -25,25 +25,7 @@ class PeriodoActivoViewModel: ObservableObject{
 
         let components = calendar.dateComponents([.day], from: date1, to: date2)
         
-        diasLabel = "\(components.day ?? 0) \(components.day == 0 ? "dia".localized : "dias".localized)"
+        diasLabel = "\(components.day ?? 0)"
     }
     
-}
-
-extension String{
-    func toDate() -> Date{
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        let date = dateFormatter.date(from:self)!
-        return date
-    }
-}
-
-extension Date{
-    func toString() -> String{
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month, .day, .hour], from: self)
-        return "\(components.day ?? 0)-\(components.month ?? 0)-\(components.year ?? 0)"
-    }
 }

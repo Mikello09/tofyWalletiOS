@@ -76,6 +76,10 @@
 		84C0BF3B25C42AEC001381F0 /* AnadirMovimientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF3A25C42AEC001381F0 /* AnadirMovimientoView.swift */; };
 		84C0BF4125C43074001381F0 /* ElegirCategoriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF4025C43074001381F0 /* ElegirCategoriaView.swift */; };
 		84C0BF4925C4308A001381F0 /* ElegirCategoriaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BF4825C4308A001381F0 /* ElegirCategoriaViewModel.swift */; };
+		862559BF25CF005C006323DA /* MovimientoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862559BE25CF005C006323DA /* MovimientoItem.swift */; };
+		862559D325CFFD4D006323DA /* CategoriaHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862559D225CFFD4D006323DA /* CategoriaHeader.swift */; };
+		86E8C5FD25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8C5FC25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift */; };
+		86E8C61025D05261007ECE2B /* congratulation.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E8C60F25D05261007ECE2B /* congratulation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +152,10 @@
 		84C0BF3A25C42AEC001381F0 /* AnadirMovimientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnadirMovimientoView.swift; sourceTree = "<group>"; };
 		84C0BF4025C43074001381F0 /* ElegirCategoriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirCategoriaView.swift; sourceTree = "<group>"; };
 		84C0BF4825C4308A001381F0 /* ElegirCategoriaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirCategoriaViewModel.swift; sourceTree = "<group>"; };
+		862559BE25CF005C006323DA /* MovimientoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimientoItem.swift; sourceTree = "<group>"; };
+		862559D225CFFD4D006323DA /* CategoriaHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaHeader.swift; sourceTree = "<group>"; };
+		86E8C5FC25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoFinalizadoPopup.swift; sourceTree = "<group>"; };
+		86E8C60F25D05261007ECE2B /* congratulation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +285,8 @@
 				84232E7E25C21AC3006E424A /* SinPeriodoView.swift */,
 				84C0BF2C25C40C4A001381F0 /* PeriodoActivoView.swift */,
 				84C0BF3A25C42AEC001381F0 /* AnadirMovimientoView.swift */,
+				862559BE25CF005C006323DA /* MovimientoItem.swift */,
+				862559D225CFFD4D006323DA /* CategoriaHeader.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -334,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				848DC17D25BC685E00F94731 /* loading.json */,
+				86E8C60F25D05261007ECE2B /* congratulation.json */,
 			);
 			path = LottieFiles;
 			sourceTree = "<group>";
@@ -362,6 +373,7 @@
 			children = (
 				84B369F925BEF86000CCD552 /* CategoriasImagenPopup.swift */,
 				84232E6B25C1BBD9006E424A /* SiNoPopup.swift */,
+				86E8C5FC25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -507,6 +519,7 @@
 				84088DFF25B9DA5500264589 /* Localizable.strings in Resources */,
 				848DC17E25BC685E00F94731 /* loading.json in Resources */,
 				84088D9025B9D59D00264589 /* Assets.xcassets in Resources */,
+				86E8C61025D05261007ECE2B /* congratulation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,17 +572,20 @@
 				84C0BF2D25C40C4A001381F0 /* PeriodoActivoView.swift in Sources */,
 				84C0BF3225C41AF9001381F0 /* PeriodoActivoViewModel.swift in Sources */,
 				84C0BF4125C43074001381F0 /* ElegirCategoriaView.swift in Sources */,
+				862559D325CFFD4D006323DA /* CategoriaHeader.swift in Sources */,
 				84C0BF2525C40404001381F0 /* BarrasChart.swift in Sources */,
 				84B36A1A25BF144E00CCD552 /* CategoriasImagenesViewModel.swift in Sources */,
 				84088DBB25B9D66B00264589 /* Colores.swift in Sources */,
 				84088DD325B9D85A00264589 /* BaseView.swift in Sources */,
 				84088E0725B9E53D00264589 /* ApiManager.swift in Sources */,
+				86E8C5FD25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift in Sources */,
 				84088DEA25B9D98800264589 /* Modifiers.swift in Sources */,
 				84088E1125B9E5C800264589 /* Usuario.swift in Sources */,
 				84B36A2B25BF2A1F00CCD552 /* CategoriaEditandoItem.swift in Sources */,
 				84088DDA25B9D8A100264589 /* LottieView.swift in Sources */,
 				848DC13225BAF17800F94731 /* HistoricoView.swift in Sources */,
 				84232E6C25C1BBD9006E424A /* SiNoPopup.swift in Sources */,
+				862559BF25CF005C006323DA /* MovimientoItem.swift in Sources */,
 				848DC17025BC62ED00F94731 /* LoginView.swift in Sources */,
 				84088D8C25B9D59A00264589 /* TofyWalletApp.swift in Sources */,
 				84088DCC25B9D80900264589 /* Botones.swift in Sources */,

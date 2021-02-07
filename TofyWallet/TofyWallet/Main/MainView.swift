@@ -50,7 +50,9 @@ struct MainView: View {
     var body: some View {
         BaseView(showLoader: $showLoader, showError: $showError, errorMessage: $errorMessage, content:
             TabView(selection:$seleccion){
-                PeriodoView(showLoader: $showLoader)
+                PeriodoView(showLoader: $showLoader,
+                            showError: $showError,
+                            errorMensaje: $errorMessage)
                     .onTapGesture {
                         self.hideKeyboard()
                     }

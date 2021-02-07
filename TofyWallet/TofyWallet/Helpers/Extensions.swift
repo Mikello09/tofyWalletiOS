@@ -28,6 +28,31 @@ extension String{
             return .ingreso
         }
     }
+    
+    func toDate() -> Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let date = dateFormatter.date(from:self) ?? Date()
+        return date
+    }
+    
+    func toDateStringFormat() -> String{
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "dd-MM-yyyy"
+        let showDate = inputFormatter.date(from: self)
+        inputFormatter.locale = .init(identifier: "es_ES")
+        inputFormatter.dateFormat = "MMM dd, yy"
+        let resultString = inputFormatter.string(from: showDate ?? Date())
+        return resultString
+    }
+    
+    func toNumber() -> CGFloat{
+        guard let number = NumberFormatter().number(from: self) else {
+            return 0
+        }
+        return CGFloat(truncating: number)
+    }
 }
 
 #if canImport(UIKit)
@@ -37,3 +62,11 @@ extension View {
     }
 }
 #endif
+
+extension Date{
+    func toString() -> String{
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day, .hour], from: self)
+        return "\(components.day ?? 0)-\(components.month ?? 0)-\(components.year ?? 0)"
+    }
+}

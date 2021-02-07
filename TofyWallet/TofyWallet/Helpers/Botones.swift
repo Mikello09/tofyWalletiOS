@@ -39,6 +39,7 @@ struct BotonPrincipal: ButtonStyle {
             Text(text)
                 .foregroundColor(.blanco)
                 .font(.system(size: 18, weight: .bold, design: .default))
+                .multilineTextAlignment(.center)
         }.frame(height: BUTTON_HEIGHT)
     }
 }
@@ -101,6 +102,32 @@ struct BotonEliminar: ButtonStyle {
         }.frame(height: BUTTON_HEIGHT)
     }
 }
+
+struct BotonFin: ButtonStyle {
+    
+    var text = ""
+    var color : UIColor = .white
+    
+
+    init(text: String) {
+        
+        self.text = text
+        self.color = UIColor.rojo
+    }
+
+    func makeBody(configuration: Self.Configuration) -> some View {
+        ZStack {
+            Rectangle()
+                .cornerRadius(CGFloat(3.0))
+                .foregroundColor(Color.init(self.color))
+            
+            Text(text)
+                .foregroundColor(.blanco)
+                .font(.system(size: 18, weight: .bold, design: .default))
+        }.frame(width: 60,height: 24)
+    }
+}
+
 
 
 struct BotonEleccion: ButtonStyle {

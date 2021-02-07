@@ -20,6 +20,7 @@ struct Grupo: Codable {
     var periodoActivo: String?
     var miembros: [Usuario]?
     var categorias: [Categoria]?
+    var periodos: [Periodo]?
 }
 
 struct Categoria: Codable, Hashable {
@@ -30,16 +31,30 @@ struct Categoria: Codable, Hashable {
 }
 
 struct Periodo: Codable, Hashable{
+    var token: String?
     var titulo: String?
     var ahorroEstimado: String?
     var fechaInicio: String?
     var fechaFin: String?
+    var ahorroFinal: String?
+    var movimientos: [Movimiento]?
 }
+
+struct Movimiento: Codable, Hashable{
+    var token: String?
+    var descripcion: String?
+    var valor: String?
+    var categoria: Categoria?
+    var fecha: String?
+    var tipo: String?
+    var periodo: String?
+    var grupo: String?
+}
+
 
 class GrupoManager: ObservableObject{
     
     static var shared = GrupoManager()
-    
     
     @Published var token: String?
     @Published var nombre: String?
@@ -47,6 +62,7 @@ class GrupoManager: ObservableObject{
     @Published var periodoActivo: String?
     @Published var miembros: [Usuario]?
     @Published var categorias: [Categoria]?
+    @Published var periodos: [Periodo]?
     
     func guardarGrupo(grupo: Grupo){
         self.token = grupo.token
@@ -55,14 +71,7 @@ class GrupoManager: ObservableObject{
         self.periodoActivo = grupo.periodoActivo
         self.miembros = grupo.miembros
         self.categorias = grupo.categorias
-    }
-    
-    func updateAhorro(ahorro: String){
-        self.ahorro = ahorro
-    }
-    
-    func updatePeriodoActivo(periodoActivo: String){
-        self.periodoActivo = periodoActivo
+        self.periodos = grupo.periodos
     }
     
     func updateCategorias(categoria: Categoria){
@@ -73,6 +82,33 @@ class GrupoManager: ObservableObject{
         } else {
             self.categorias = [categoria]
         }
+    }
+    
+    func guardarMovimiento(movimiento: Movimiento){
+        let periodosActualizados = self.periodos?.map({ (periodo) -> Periodo in
+            if periodo.token == movimiento.periodo{
+                var periodoActualizado = periodo
+                periodoActualizado.movimientos?.append(movimiento)
+                return periodoActualizado
+            } else {
+                return periodo
+            }
+        })
+        self.periodos = periodosActualizados
+    }
+    
+    func finalizarPeriodo(periodoFinalizado: Periodo){
+        self.periodoActivo = ""
+        let periodosActualizados = self.periodos?.map({ (periodo) -> Periodo in
+            if periodo.token == periodoFinalizado.token{
+                var periodoActualizado = periodo
+                periodoActualizado.fechaFin = periodoFinalizado.fechaFin
+                return periodoActualizado
+            } else {
+                return periodo
+            }
+        })
+        self.periodos = periodosActualizados
     }
 
 }

@@ -20,7 +20,7 @@ let abandonarGrupoUrl: String = "\(baseUrl)/grupo/abandonarGrupo"
 
 let crearPeriodoUrl: String = "\(baseUrl)/periodo/crearPeriodo"//titulo,ahorroEstimado,fechaInicio,grupo
 let finalizarPeriodoUrl: String = "\(baseUrl)/periodo/finalizarPeriodo"//periodoToken,grupo,fechaFin
-let anadirMovimientoUrl: String = "\(baseUrl)/periodo/addMovimiento"//descripcion,categoria,valor,
+let anadirMovimientoUrl: String = "\(baseUrl)/periodo/addMovimiento"//
 
 let SESION: URLSession = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
     

@@ -60,7 +60,7 @@
 "iniciaPeriodo" = "Iniciar periodo";
 "iniciaPeriodoInfo" = "Inicia un periodo";
 "titulo" = "Título";
-"ahorroEstimado" = "Ahorro estimado";
+"ahorroEstimado" = "Ahorro previsto";
 "finPeriodo" = "Fin periodo";
 "desde" = "desde";
 "dia" = "día";
@@ -71,3 +71,11 @@
 "descripcion" = "Descripción";
 "valor" = "Valor";
 "anadirCategoria" = "Añadir categoría";
+"finalizarPeriodoInfo" = "¿Estás seguro de finalizar el periodo actual?";
+"elegirCategoria" = "Elegir categoría";
+"fin" = "Fin";
+"total" = "Total";
+"periodoFinalizado" = "Fin de periodo";
+"ahorroFinal" = "Total ahorrado";
+"ingresos" = "Ingresos";
+"gastos" = "Gastos";

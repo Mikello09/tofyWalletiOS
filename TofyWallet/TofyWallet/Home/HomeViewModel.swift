@@ -27,7 +27,7 @@ class HomeViewModel: ObservableObject{
         if getUsuario().grupo == ""{
             estadoUsuario = .sinGrupo
         } else{
-            if GrupoManager.shared.periodoActivo == "" || GrupoManager.shared.periodoActivo == nil{
+            if GrupoManager.shared.periodoActivo == nil{
                 estadoUsuario = .sinPeriodoActivo
             } else{
                 estadoUsuario = .conPeriodoActivo

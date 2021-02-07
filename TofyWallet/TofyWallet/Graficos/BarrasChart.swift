@@ -35,10 +35,14 @@ struct BarrasChart: View {
                             
                         }
                         VStack{
-                            Text(String(format: "%.2f", item.valor))
-                                .info()
-                            Text("\(item.titulo)")
-                                .info()
+                            Spacer()
+                            VStack{
+                                Text("\(String(format: "%.2f", item.valor))€")
+                                    .setStyle(font: .semibold, size: 16, color: .negro)
+                                Text("\(item.titulo)")
+                                    .setStyle(font: .regular, size: 16, color: .negro)
+                            }
+                            .frame(height: self.calcularAlturaTexto(valor: item.valor, frameHeight: geometry.size.height - 8))
                         }
                     }
                     
@@ -62,5 +66,14 @@ struct BarrasChart: View {
         let maxValue = ponderacion()
         let porcentajeSobrePonderacion = (valor/maxValue)
         return porcentajeSobrePonderacion*frameHeight
+    }
+    
+    func calcularAlturaTexto(valor: CGFloat, frameHeight: CGFloat) -> CGFloat{
+        let alturaBarra = calcularAltura(valor: valor, frameHeight: frameHeight)
+        if alturaBarra < 40{
+            return 50
+        } else {
+            return alturaBarra
+        }
     }
 }
