@@ -80,6 +80,8 @@
 		862559D325CFFD4D006323DA /* CategoriaHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862559D225CFFD4D006323DA /* CategoriaHeader.swift */; };
 		86E8C5FD25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8C5FC25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift */; };
 		86E8C61025D05261007ECE2B /* congratulation.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E8C60F25D05261007ECE2B /* congratulation.json */; };
+		9769940525D26536005E9777 /* SelectableBoxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769940425D26536005E9777 /* SelectableBoxItem.swift */; };
+		97DE496725D261E7006B6435 /* HistoricoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE496625D261E7006B6435 /* HistoricoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +158,8 @@
 		862559D225CFFD4D006323DA /* CategoriaHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaHeader.swift; sourceTree = "<group>"; };
 		86E8C5FC25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodoFinalizadoPopup.swift; sourceTree = "<group>"; };
 		86E8C60F25D05261007ECE2B /* congratulation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulation.json; sourceTree = "<group>"; };
+		9769940425D26536005E9777 /* SelectableBoxItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableBoxItem.swift; sourceTree = "<group>"; };
+		97DE496625D261E7006B6435 /* HistoricoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,7 +330,9 @@
 		848DC12025BAF13200F94731 /* Historico */ = {
 			isa = PBXGroup;
 			children = (
+				9769940325D26505005E9777 /* Components */,
 				848DC13125BAF17800F94731 /* HistoricoView.swift */,
+				97DE496625D261E7006B6435 /* HistoricoViewModel.swift */,
 			);
 			path = Historico;
 			sourceTree = "<group>";
@@ -404,6 +410,14 @@
 				84C0BF4825C4308A001381F0 /* ElegirCategoriaViewModel.swift */,
 			);
 			path = ElegirCategoria;
+			sourceTree = "<group>";
+		};
+		9769940325D26505005E9777 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9769940425D26536005E9777 /* SelectableBoxItem.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,6 +583,7 @@
 				84C0BF4925C4308A001381F0 /* ElegirCategoriaViewModel.swift in Sources */,
 				84232E7625C21860006E424A /* PeriodoViewModel.swift in Sources */,
 				84B369E825BED0F500CCD552 /* ConGrupoView.swift in Sources */,
+				97DE496725D261E7006B6435 /* HistoricoViewModel.swift in Sources */,
 				84C0BF2D25C40C4A001381F0 /* PeriodoActivoView.swift in Sources */,
 				84C0BF3225C41AF9001381F0 /* PeriodoActivoViewModel.swift in Sources */,
 				84C0BF4125C43074001381F0 /* ElegirCategoriaView.swift in Sources */,
@@ -579,6 +594,7 @@
 				84088DD325B9D85A00264589 /* BaseView.swift in Sources */,
 				84088E0725B9E53D00264589 /* ApiManager.swift in Sources */,
 				86E8C5FD25D04D10007ECE2B /* PeriodoFinalizadoPopup.swift in Sources */,
+				9769940525D26536005E9777 /* SelectableBoxItem.swift in Sources */,
 				84088DEA25B9D98800264589 /* Modifiers.swift in Sources */,
 				84088E1125B9E5C800264589 /* Usuario.swift in Sources */,
 				84B36A2B25BF2A1F00CCD552 /* CategoriaEditandoItem.swift in Sources */,

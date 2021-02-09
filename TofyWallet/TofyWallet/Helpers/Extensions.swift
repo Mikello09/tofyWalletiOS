@@ -69,4 +69,10 @@ extension Date{
         let components = calendar.dateComponents([.year, .month, .day, .hour], from: self)
         return "\(components.day ?? 0)-\(components.month ?? 0)-\(components.year ?? 0)"
     }
+    
+    func getYearFromDate() -> Int{
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year], from: self)
+        return components.year ?? 0
+    }
 }
