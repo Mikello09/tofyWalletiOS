@@ -79,3 +79,8 @@
 "ahorroFinal" = "Total ahorrado";
 "ingresos" = "Ingresos";
 "gastos" = "Gastos";
+
+
+//HISTORICO
+"ano" = "Año";
+"elegirGrafico" = "Elegir gráfico";

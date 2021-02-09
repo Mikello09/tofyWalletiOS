@@ -31,6 +31,7 @@ struct InitialView: View {
                             }
                 }
             )
+            .ignoresSafeArea(.all)
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
