@@ -30,7 +30,7 @@ struct CategoriaItem: View {
                     .padding(.leading)
                     }
                 Spacer()
-                Image(systemName: (categoria.imagen ?? "").toSystemImage())
+                categoria.imagen?.toImage()
                     .resizable()
                     .frame(width: 32, height: 32)
                     .foregroundColor(.principal)

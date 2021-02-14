@@ -82,6 +82,7 @@
 		86E8C61025D05261007ECE2B /* congratulation.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E8C60F25D05261007ECE2B /* congratulation.json */; };
 		9769940525D26536005E9777 /* SelectableBoxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769940425D26536005E9777 /* SelectableBoxItem.swift */; };
 		97DE496725D261E7006B6435 /* HistoricoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE496625D261E7006B6435 /* HistoricoViewModel.swift */; };
+		97F2FCF525D70FA500E42FD4 /* BarrasHistoricoChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2FCF425D70FA500E42FD4 /* BarrasHistoricoChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		86E8C60F25D05261007ECE2B /* congratulation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulation.json; sourceTree = "<group>"; };
 		9769940425D26536005E9777 /* SelectableBoxItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableBoxItem.swift; sourceTree = "<group>"; };
 		97DE496625D261E7006B6435 /* HistoricoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoViewModel.swift; sourceTree = "<group>"; };
+		97F2FCF425D70FA500E42FD4 /* BarrasHistoricoChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrasHistoricoChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				84C0BF2425C40404001381F0 /* BarrasChart.swift */,
+				97F2FCF425D70FA500E42FD4 /* BarrasHistoricoChart.swift */,
 			);
 			path = Graficos;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			files = (
 				84B369DB25BD867300CCD552 /* GrupoViewModel.swift in Sources */,
 				84B369D625BD810A00CCD552 /* GrupoView.swift in Sources */,
+				97F2FCF525D70FA500E42FD4 /* BarrasHistoricoChart.swift in Sources */,
 				84B369E325BEC9D000CCD552 /* Grupo.swift in Sources */,
 				84088DF825B9DA1700264589 /* BiometriaHelper.swift in Sources */,
 				848DC18925BCDBEF00F94731 /* HomeViewModel.swift in Sources */,

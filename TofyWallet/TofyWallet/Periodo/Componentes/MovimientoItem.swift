@@ -29,7 +29,7 @@ struct MovimientoItem: View {
                     .padding(.leading)
                     .padding(.leading)
                 Spacer()
-                Image(systemName: movimiento.categoria?.imagen?.toSystemImage() ?? "")
+                movimiento.categoria?.imagen?.toImage()
                     .padding(.trailing)
                     .foregroundColor(.principal)
             }

@@ -7,11 +7,13 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 
 class HistoricoViewModel: ObservableObject{
     
     @Published var years: [Int]?
+    @Published var generalCategorias: [Categoria]?
     
     
     func getYears(){
@@ -29,5 +31,22 @@ class HistoricoViewModel: ObservableObject{
         self.years = anos
     }
     
+    func getGeneralCategorias(){
+        var general: [Categoria] = []
+        general.append(Categoria(token: "ahorro", titulo: "Ahorro", imagen: "", tipo: ""))
+        general.append(Categoria(token: "gasto", titulo: "Gasto", imagen: "", tipo: ""))
+        general.append(Categoria(token: "ingreso", titulo: "Ingreso", imagen: "", tipo: ""))
+        self.generalCategorias = general
+    }
     
+    func getGraficoColor(index: Int) -> Color{
+        switch index {
+        case 0: return .azul
+        case 1: return .amarillo
+        case 2: return .rosa
+        case 3: return .gris
+        case 4: return .morado
+        default:return .negro
+        }
+    }
 }

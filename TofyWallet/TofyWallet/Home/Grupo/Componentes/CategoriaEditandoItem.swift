@@ -33,7 +33,7 @@ struct CategoriaEditandoItem: View {
                         Spacer()
                         VStack{
                             VStack{
-                                Image(systemName: imagen.toSystemImage())
+                                imagen.toImage()
                                     .resizable()
                                     .frame(width: 24, height: 24)
                                     .foregroundColor(.principal)

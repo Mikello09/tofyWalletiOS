@@ -14,7 +14,7 @@ struct CategoriaHeader: View {
     
     var body: some View {
         HStack{
-            Image(systemName: categoria.categoria.imagen?.toSystemImage() ?? "")
+            categoria.categoria.imagen?.toImage()
                 .resizable()
                 .foregroundColor(.principal)
                 .frame(width: 32, height: 32)

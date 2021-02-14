@@ -19,7 +19,7 @@ struct SelectableBoxItem: View {
         VStack{
             VStack(spacing: 4){
                 if imagen != ""{
-                    Image(systemName: imagen)
+                    imagen.toImage()
                         .resizable()
                         .frame(width: 24, height: 24)
                         .foregroundColor(selectedIndex == index ? .blanco : .principal)

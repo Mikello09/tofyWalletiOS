@@ -11,13 +11,12 @@ struct BarraItem: Hashable{
     var titulo: String
     var valor: CGFloat
     var color: Color
+    var seleccionado: Bool = false
 }
 
 struct BarrasChart: View {
     
     @Binding var values: [BarraItem]
-    
-    //@State var maxValue: CGFloat = 0.0
     
     var body: some View {
         GeometryReader{ geometry in
