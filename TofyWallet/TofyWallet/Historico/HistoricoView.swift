@@ -345,14 +345,16 @@ struct HistoricoView: View {
     
     func calcularBarrasPeriodos(){
         var barrasPeriodosAmostrar: [BarraItem] = []
-        for (index,categoria) in categorias.enumerated(){
-            var valorCategoria: CGFloat = 0
-            for movimiento in periodos[periodoSelected].movimientos ?? []{
-                if movimiento.categoria?.token == categoria.token{
-                    valorCategoria += movimiento.valor?.toNumber() ?? 0
+        if periodos.count > 0 {
+            for (index,categoria) in categorias.enumerated(){
+                var valorCategoria: CGFloat = 0
+                for movimiento in periodos[periodoSelected].movimientos ?? []{
+                    if movimiento.categoria?.token == categoria.token{
+                        valorCategoria += movimiento.valor?.toNumber() ?? 0
+                    }
                 }
+                barrasPeriodosAmostrar.append(BarraItem(titulo: categoria.titulo ?? "", valor: valorCategoria, color: self.viewModel.getGraficoColor(index: index)))
             }
-            barrasPeriodosAmostrar.append(BarraItem(titulo: categoria.titulo ?? "", valor: valorCategoria, color: self.viewModel.getGraficoColor(index: index)))
         }
         barrasPeriodos = barrasPeriodosAmostrar
     }
