@@ -78,6 +78,8 @@ struct HistoricoView: View {
                         Text(TipoGrafico.general.rawValue).tag(TipoGrafico.general)
                         Text(TipoGrafico.categorias.rawValue).tag(TipoGrafico.categorias)
                         Text(TipoGrafico.periodos.rawValue).tag(TipoGrafico.periodos)
+                    }.onChange(of: tipoGrafico) {value in
+                        barraSeleccionada = nil
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding([.leading, .trailing])

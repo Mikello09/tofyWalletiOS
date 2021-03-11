@@ -38,12 +38,12 @@ struct CategoriaHeader: View {
     }
     
     func calcularTotalCategoria() -> String{
-        var total:Double = 0
+        var total:CGFloat = 0
         for movimiento in movimientos{
             if movimiento.categoria?.token == categoria.categoria.token{
-                total += Double(movimiento.valor ?? "") ?? 0
+                total += (movimiento.valor ?? "").toNumber()
             }
         }
-        return "\(total)"
+        return String(format: "%.2f", total)
     }
 }

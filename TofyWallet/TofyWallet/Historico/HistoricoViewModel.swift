@@ -46,6 +46,13 @@ class HistoricoViewModel: ObservableObject{
         case 2: return .rosa
         case 3: return .gris
         case 4: return .morado
+        case 5: return .turquesa
+        case 6: return .azulOscuro
+        case 7: return .naranja
+        case 8: return .piel
+        case 9 : return .blanco
+        case 10: return .marron
+        case 11: return .verdeFosforito
         default:return .negro
         }
     }

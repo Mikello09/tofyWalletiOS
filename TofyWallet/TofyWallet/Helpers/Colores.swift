@@ -19,6 +19,12 @@ extension Color{
     public static let amarillo: Color = Color(.amarillo)
     public static let morado: Color = Color(.morado)
     public static let rosa: Color = Color(.rosa)
+    public static let turquesa: Color = Color(.turquesa)
+    public static let azulOscuro: Color = Color(.azulOscuro)
+    public static let naranja: Color = Color(.naranja)
+    public static let piel: Color = Color(.piel)
+    public static let marron: Color = Color(.marron)
+    public static let verdeFosforito: Color = Color(.verdeFosforito)
 }
 
 extension UIColor{
@@ -33,4 +39,10 @@ extension UIColor{
     public static let amarillo: UIColor = UIColor.init(named: "Amarillo")!
     public static let morado: UIColor = UIColor.init(named: "Morado")!
     public static let rosa: UIColor = UIColor.init(named: "Rosa")!
+    public static let turquesa: UIColor = UIColor.init(named: "Turquesa")!
+    public static let azulOscuro: UIColor = UIColor.init(named: "AzulOscuro")!
+    public static let naranja: UIColor = UIColor.init(named: "Naranja")!
+    public static let piel: UIColor = UIColor.init(named: "Piel")!
+    public static let marron: UIColor = UIColor.init(named: "Marron")!
+    public static let verdeFosforito: UIColor = UIColor.init(named: "VerdeFosforito")!
 }

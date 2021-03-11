@@ -178,12 +178,13 @@ struct PeriodoView: View {
         if let periodos = periodos{
             self.movimientos = (periodos.filter({$0.token == periodo.token}).first?.movimientos ?? []).reversed()
         }
-        
+        print(movimientos.count)
         for movimiento in movimientos{
             if movimiento.tipo == "Gasto"{
                 gastos += (movimiento.valor ?? "").toNumber()
             }
             if movimiento.tipo == "Ingreso"{
+                print("INGRESO",(movimiento.valor ?? "").toNumber())
                 ingresos += (movimiento.valor ?? "").toNumber()
             }
         }
