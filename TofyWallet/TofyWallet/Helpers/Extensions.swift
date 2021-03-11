@@ -48,15 +48,8 @@ extension String{
     }
     
     func toNumber() -> CGFloat{
-        let numberToConvert = self.replacingOccurrences(of: ",", with: ".")
-        let numberFormatter = NumberFormatter()
-        numberFormatter.minimumFractionDigits = 2
-        numberFormatter.maximumFractionDigits = 2
-        numberFormatter.roundingMode = .halfDown
-        guard let number = numberFormatter.number(from: numberToConvert) else {
-            return 0
-        }   
-        return CGFloat(number.doubleValue)
+        let number = (self as NSString).doubleValue
+        return CGFloat(number)
     }
 }
 
