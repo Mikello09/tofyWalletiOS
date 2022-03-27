@@ -20,13 +20,25 @@ struct CategoriasImagenPopup: View {
             ZStack{
                 Color.grisTransparente
                 VStack{
-                    Spacer()
                     VStack{
+                        HStack{
+                            Spacer()
+                            Image(systemName: "xmark")
+                                .renderingMode(.template)
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(.principal)
+                                .padding([.top, .trailing], 8)
+                                .onTapGesture {
+                                    self.imagenPopupShowed.toggle()
+                                }
+                        }
                         Text("eligeImagenCategoria".localized)
                             .info()
                             .padding()
                             .lineLimit(nil)
                             .multilineTextAlignment(.center)
+                        Spacer()
                         ScrollView(.vertical, showsIndicators: false){
                             LazyVGrid(columns: Array(repeating: .init(.flexible(), alignment: .center), count: 4)){
                                 ForEach(imagenes, id: \.self){ imagen in

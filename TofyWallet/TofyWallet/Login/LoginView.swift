@@ -37,27 +37,45 @@ struct LoginView: View {
                     Text(error).error()
                     Spacer()
                 }.padding([.leading,.trailing])
-                Image("AppIcon")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                Text("Tofy Wallet").titulo(color: .principal)
                 Button(action: {
                     if puedeHacerLogin(){
+                        hideKeyboard()
                         showLoader = true
                         viewModel.login(email: email, pass: pass)
                     }
                 }){EmptyView()}.buttonStyle(BotonPrincipal(text: "entrar".localized, enabled: puedeHacerLogin()))
                 .padding()
+                Image("AppIcon")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                Text("Tofy Wallet").titulo(color: .principal)
                 Spacer()
+                    .onTapGesture {
+                        hideKeyboard()
+                    }
+                HStack{
+                    Spacer()
+                    Button("¿No tienes cuenta? Regístrate", action: {
+                        print("")
+                    })
+                    .foregroundColor(.principal)
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                    Spacer()
+                }
+                .padding(.bottom, 32)
                 Group{
                     NavigationLink(destination: InitialView(), isActive: $goToMain){EmptyView()}
                 }
             }
-            .padding(.top, 64)
+            .padding(.top, 96)
+            .onTapGesture {
+                hideKeyboard()
+            }
         )
         .onReceive(viewModel.$error){ err in
             if let error = err{
                 showLoader = false
+                pass = ""
                 self.error = error
             }
         }

@@ -146,10 +146,11 @@ struct BotonEleccion: ButtonStyle {
         ZStack {
             Rectangle()
                 .cornerRadius(CGFloat(3.0))
-                .foregroundColor(Color.init(self.color))
+                .border(Color.init(self.color), width: 2)
+                .foregroundColor(Color.blanco)
             
             Text(text)
-                .foregroundColor(.blanco)
+                .foregroundColor(.negro)
                 .font(.system(size: 18, weight: .bold, design: .default))
         }.frame(height: BUTTON_HEIGHT)
     }

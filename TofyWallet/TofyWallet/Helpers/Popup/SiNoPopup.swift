@@ -29,11 +29,13 @@ struct SiNoPopup: View {
                             Button(action: {
                                 si()
                             }){EmptyView()}.buttonStyle(BotonEleccion(text: "si".localized, color: .rojo))
-                            .padding()
+                            .padding([.top,.bottom, .leading])
+                            .padding(.trailing, 4)
                             Button(action: {
                                 no()
                             }){EmptyView()}.buttonStyle(BotonEleccion(text: "no".localized, color: .verde))
-                            .padding()
+                            .padding([.top,.bottom, .trailing])
+                            .padding(.leading, 4)
                         }
                     }
                     .background(Color.blanco)

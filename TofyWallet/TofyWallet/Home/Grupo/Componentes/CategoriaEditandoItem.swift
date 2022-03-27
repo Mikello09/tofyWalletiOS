@@ -11,11 +11,12 @@ struct CategoriaEditandoItem: View {
     
     var categoria: Categoria
     var categoriaEditada: (_ categoria: Categoria) -> ()
+    var editandoImagen: (_ categoria: Categoria) -> ()
     @State var titulo: String = ""
     @State var imagen: String = ""
     @State var tipo: TipoCategoria = .gasto
     
-    @State var editandoImagen: Bool = false
+    //@State var editandoImagen: Bool = false
     
     var body: some View {
         ZStack{
@@ -44,7 +45,8 @@ struct CategoriaEditandoItem: View {
                         .cornerRadius(5.0)
                         .shadow(color: .gris, radius: 5.0, x: 3.0, y: 3.0)
                         .onTapGesture{
-                            editandoImagen = true
+                            editandoImagen(self.categoria)
+                            //editandoImagen = true
                         }
                     }
                     .padding([.leading, .trailing])
@@ -108,9 +110,9 @@ struct CategoriaEditandoItem: View {
             .cornerRadius(5.0)
             .shadow(color: .gris, radius: 5.0, x: 3.0, y: 3.0)
             .padding()
-            if editandoImagen{
-                CategoriasImagenPopup(imagenPopupShowed: $editandoImagen, imagenSeleccionada: imagenEditada)
-            }
+//            if editandoImagen{
+//                CategoriasImagenPopup(imagenPopupShowed: $editandoImagen, imagenSeleccionada: imagenEditada)
+//            }
         }
         
         .onAppear{

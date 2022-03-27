@@ -20,9 +20,12 @@ struct ConGrupoView: View {
     @State var imagenCategoria: CategoriaImage = .interrogante
     @State var eligiendoImagen: Bool = false
     @State var tipoCategoria: TipoCategoria = .gasto
+    @State var editandoImagen: Bool = false
     
     //EDITAR CATEGORIA
     @State var editandoCategorias: Bool = false
+    @State var grupoAEditar: Grupo = Grupo()
+    @State var tokenCategoriaEditando: String = ""
     
     var body: some View {
         ZStack{
@@ -97,14 +100,28 @@ struct ConGrupoView: View {
                         Text("categorias".localized)
                             .subtitulo(color: .negro)
                         if (grupo.categorias ?? []).count > 0{
-                            Image(systemName: "pencil.circle.fill")
-                                .resizable()
-                                .foregroundColor(.principal)
-                                .frame(width: 24, height: 24)
-                                .padding(.leading)
-                                .onTapGesture {
-                                    self.editandoCategorias.toggle()
+                            ZStack{
+                                HStack{
+                                    Image(systemName: editandoCategorias ? "checkmark.circle" : "pencil.circle")
+                                        .resizable()
+                                        .foregroundColor(.blanco)
+                                        .frame(width: 16, height: 16)
+                                        .padding(.leading, 4)
+                                    Spacer()
                                 }
+                                HStack{
+                                    Spacer()
+                                    Text(editandoCategorias ? "aceptar".localized : "editar".localized)
+                                        .setStyle(font: .semibold, size: 16, color: .blanco)
+                                    Spacer()
+                                }
+                            }
+                            .frame(width: 110, height: 24)
+                            .background(Color.principal)
+                            .cornerRadius(4)
+                            .onTapGesture {
+                                self.editandoCategorias.toggle()
+                            }
                         }
                         Spacer()
                         Image(systemName: "plus.circle.fill")
@@ -230,8 +247,8 @@ struct ConGrupoView: View {
                             CategoriaItem(categoria: categoria)
                         }
                     } else {
-                        ForEach(grupo.categorias ?? [], id: \.self){ categoria in
-                            CategoriaEditandoItem(categoria: categoria, categoriaEditada: categoriaEditada)
+                        ForEach(grupoAEditar.categorias ?? [], id: \.self){ categoria in
+                            CategoriaEditandoItem(categoria: categoria, categoriaEditada: categoriaEditada, editandoImagen: editandoImagen)
                         }
                     }
                     Button(action: {
@@ -246,8 +263,27 @@ struct ConGrupoView: View {
                     imagenCategoria = imagen
                 })
             }
+            if editandoImagen{
+                CategoriasImagenPopup(imagenPopupShowed: $editandoImagen, imagenSeleccionada: { imagen in
+                    grupoAEditar.categorias = grupoAEditar.categorias?.map({ categoria in
+                        var c = categoria
+                        if c.token == tokenCategoriaEditando{
+                            c.imagen = imagen.rawValue
+                        }
+                        return c
+                    })
+                })
+            }
+        }
+        .onAppear(){
+            self.grupoAEditar = grupo
         }
         
+    }
+    
+    func editandoImagen(categoria: Categoria){
+        self.tokenCategoriaEditando = categoria.token ?? ""
+        editandoImagen.toggle()
     }
     
     func categoriaEditada(categoria: Categoria){

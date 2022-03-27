@@ -107,12 +107,13 @@ struct GrupoView: View {
                                          abandonarGrupo: estasSeguroDeAbandonar)
                         }
                     }
-                    Spacer()
+                    //Spacer()
                 }
                 if preguntaAbandornarGrupo{
                     SiNoPopup(titulo: "\("preguntarAbandonar".localized) \(grupo.nombre ?? "")?", si: abandonarGrupo, no: noAbandonarGrupo)
                 }
             }
+            .ignoresSafeArea(.all, edges: preguntaAbandornarGrupo ? [.bottom, .top] : .bottom)
             .onTapGesture {
                 self.hideKeyboard()
             },titulo: "grupo".localized

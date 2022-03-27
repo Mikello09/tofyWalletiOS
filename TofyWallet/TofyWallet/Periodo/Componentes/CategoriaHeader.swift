@@ -21,19 +21,16 @@ struct CategoriaHeader: View {
             Text(categoria.categoria.titulo ?? "")
                 .setStyle(font: .semibold, size: 18, color: .principal)
             Spacer()
-            if !categoria.hidden{
-                HStack{
-                    Text("\("total".localized):")
-                        .setStyle(font: .regular, size: 12, color: .negro)
-                    Text("\(calcularTotalCategoria()) €")
-                        .setStyle(font: .semibold, size: 14, color: .principal)
-                }
-            } else {
-                EmptyView()
+            HStack{
+                Text("\("total".localized):")
+                    .setStyle(font: .regular, size: 12, color: .negro)
+                Text("\(calcularTotalCategoria()) €")
+                    .setStyle(font: .semibold, size: 14, color: .principal)
             }
             Image(systemName: categoria.hidden ? "chevron.down" : "chevron.up")
                 .foregroundColor(.gris)
         }
+        .frame(height: 80)
         .padding([.leading, .trailing])
     }
     

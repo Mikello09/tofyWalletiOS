@@ -46,7 +46,7 @@ struct BaseView<Content>: View where Content: View{
                             .padding()
                         Spacer()
                     }
-                }
+                }.ignoresSafeArea()
             }
             if showError{
                 ZStack{
